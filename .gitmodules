@@ -40,3 +40,24 @@
 [submodule ".vim/bundle/skittles_berry.git"]
 	path = .vim/bundle/skittles_berry.git
 	url = git://github.com/shawncplus/skittles_berry.git
+[submodule ".vim/bundle/airline.git"]
+	path = .vim/bundle/airline.git
+	url = git@github.com:bling/vim-airline.git
+[submodule ".vim/bundle/ctrlp.vim"]
+	path = .vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule ".vim/bundle/tlib_vim.git"]
+	path = .vim/bundle/tlib_vim.git
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule ".vim/bundle/vim-addon-mw-utils.git"]
+	path = .vim/bundle/vim-addon-mw-utils.git
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule ".vim/bundle/vim-snipmate.git"]
+	path = .vim/bundle/vim-snipmate.git
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule ".vim/bundle/vim-snippets"]
+	path = .vim/bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule ".vim/bundle/airline"]
+	path = .vim/bundle/airline
+	url = https://github.com/bling/vim-airline.git

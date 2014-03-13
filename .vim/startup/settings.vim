@@ -27,9 +27,9 @@ set nocompatible
 set enc=utf-8
 set fillchars=vert:¦
 
-set noexpandtab
-set tabstop=4
-set shiftwidth=4
+set expandtab
+set tabstop=2
+set shiftwidth=2
 set foldcolumn=1
 set cc=+1,+2
 
@@ -44,8 +44,8 @@ set vb
 set ttym=xterm2
 
 set wrap
-
 set tags=~/.vim/tags/tags
+
 
 if version > 720
 	set undofile
@@ -60,6 +60,10 @@ else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
-
-let g:Powerline_symbols = 'fancy'
-call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
+let g:airline_powerline_fonts=1
+let g:airline_theme='powerlineish'
+let g:airline_left_sep = ' '
+let g:airline_right_sep = ' '
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_section_x=""
+let g:airline_section_y="%{strlen(&ft)?&ft:'none'}"

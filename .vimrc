@@ -28,5 +28,5 @@ source ~/.vim/startup/vim.vim
 source ~/.vim/startup/yaml.vim
 
 if &diff
-	color skittles_dark
+	color molokai
 endif

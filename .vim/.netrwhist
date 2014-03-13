@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/502190'
+let g:netrw_dirhist_2='/Users/502190/dev/ng'
+let g:netrw_dirhist_3='/Users/502190/dotfiles/.vim/bundle/vim-airline'
+let g:netrw_dirhist_4='/Users/502190/dev/ng'
+let g:netrw_dirhist_5='/Users/502190/dev/sails/activity'
+let g:netrw_dirhist_6='/Users/502190/dev/ng'
+let g:netrw_dirhist_7='/Users/502190/dotfiles'
+let g:netrw_dirhist_8='/Users/502190/dev/sails/activity'
