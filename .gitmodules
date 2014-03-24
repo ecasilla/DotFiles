@@ -64,3 +64,9 @@
 [submodule "bundle/colorschemes"]
 	path = bundle/colorschemes
 	url = git@github.com:flazz/vim-colorschemes.git
+[submodule ".vim/bundle/tabular.vim"]
+	path = .vim/bundle/tabular.vim
+	url = https://github.com/godlygeek/tabular.git
+[submodule ".vim/bundle/vim-less"]
+	path = .vim/bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git
