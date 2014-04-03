@@ -1,9 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/502190/dev/angular/form'
-let g:netrw_dirhist_2='/Users/502190/dev/grunt/grunt-workspace'
-let g:netrw_dirhist_3='/Users/502190/dev/angular/password'
-let g:netrw_dirhist_4='/Users/502190/dev/eventloopclass'
-let g:netrw_dirhist_5='/Users/502190/repos/tmux-powerline/themes'
-let g:netrw_dirhist_6='/Users/502190'
-let g:netrw_dirhist_7='/Users/502190/dotfiles/completion'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/Users/ecasilla/development/meteor/bms'
+let g:netrw_dirhist_2='/Users/ecasilla/development/meteor-source'
