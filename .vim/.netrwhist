@@ -1,3 +1,5 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =1
 let g:netrw_dirhist_1='/Users/502190/dev/javascript-koans'
+let g:netrw_dirhist_1='/Users/ecasilla/development/meteor/bms'
+let g:netrw_dirhist_2='/Users/ecasilla/development/meteor-source'
