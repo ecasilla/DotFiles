@@ -4,4 +4,4 @@
 "color railscasts
 "color molokai
 "color skittles_dark
-color molokai
+color hybrid
