@@ -233,7 +233,7 @@ fun <SID>X(group, fg, bg, attr)
 endfun
 " }}}
 
-call <SID>X("Normal",		"cccccc",	"151515",	"none")
+call <SID>X("Normal",		"cccccc",	"242424",	"none")
 call <SID>X("Cursor",		"222222",	"ecee90",	"none")
 call <SID>X("CursorLine",	"",			"32322e",	"none")
 call <SID>X("CursorColumn",	"",			"2d2d2d",	"")
@@ -242,7 +242,7 @@ call <SID>X("CursorColumn",	"",			"2d2d2d",	"")
 			"IncSearch
 call <SID>X("Search",		"d787ff",	"5f5f5f",	"")
 call <SID>X("MatchParen",	"ecee90",	"857b6f",	"bold")
-call <SID>X("SpecialKey",	"6c6c6c",	"000000",	"none")
+call <SID>X("SpecialKey",	"6c6c6c",	"2d2d2d",	"none")
 call <SID>X("Visual",		"ecee90",	"597418",	"none")
 call <SID>X("LineNr",		"857b6f",	"121212",	"none")
 call <SID>X("Folded",		"a0a8b0",	"404048",	"none")
@@ -257,14 +257,14 @@ call <SID>X("StatusLineNC",	"857b6f",	"444444",	"none")
 call <SID>X("Pmenu",		"f6f3e8",	"444444",	"")
 call <SID>X("PmenuSel",		"121212",	"caeb82",	"")
 call <SID>X("WarningMsg",	"ff0000",	"",			"")
-"call <SID>X("ErrorMsg
-"call <SID>X("ModeMsg
-"call <SID>X("MoreMsg
-"call <SID>X("Directory
-call <SID>X("DiffAdd",		"",			"507d2a",	"bold")
-call <SID>X("DiffChange",	"",			"151515",	"bold")
-call <SID>X("DiffDelete",	"e34234",	"151515",	"bold")
-call <SID>X("DiffText",		"",			"cc5500",	"bold")
+			"ErrorMsg
+			"ModeMsg
+			"MoreMsg
+			"Directory
+			"DiffAdd
+			"DiffChange
+			"DiffDelete
+			"DiffText
 
 " syntax highlighting
 call <SID>X("Number",		"e5786d",	"",			"none")

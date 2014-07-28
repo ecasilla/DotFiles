@@ -76,3 +76,6 @@
 [submodule "bundle/mustache"]
 	path = bundle/mustache
 	url = git://github.com/mustache/vim-mustache-handlebars.git
+[submodule ".vim/colors/colorschemes"]
+	path = .vim/colors/colorschemes
+	url = git@github.com:flazz/vim-colorschemes.git

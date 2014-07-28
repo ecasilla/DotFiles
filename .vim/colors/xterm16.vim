@@ -425,7 +425,6 @@ try
 
 	call s:hi( 'Comment'      , 'none'  , 'darkred'    , 'none'      )
 	call s:hi( 'Constant'     , 'none'  , 'darkyellow' , 'none'      )
-	call s:hi( 'String'       , 'bold'  , 'darkyellow' , 'none'      )
 	call s:hi( 'Error'        , 'none'  , 'white'      , 'red'       )
 	call s:hi( 'Identifier'   , 'none'  , 'darkcyan'   , 'none'      )
 	call s:hi( 'Ignore'       , 'none'  , 'darkgrey'   , 'none'      )
