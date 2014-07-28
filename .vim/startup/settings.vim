@@ -52,9 +52,6 @@ if version > 720
 	set undodir=~/vimundo/
 endif
 
-let $XIKI_DIR = "[~/xiki]"
-source ~/xiki/etc/vim/xiki.vim
-
 
 let mapleader='\'
 if exists('$TMUX')
@@ -65,9 +62,17 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 let g:airline_powerline_fonts=1
-let g:airline_theme='powerlineish'
+let g:airline_theme='hybrid'
 let g:airline_left_sep = ' '
 let g:airline_right_sep = ' '
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_section_x=""
-let g:airline_section_y="%{strlen(&ft)?&ft:'none'}"
+"let g:airline_section_y="%{strlen(&ft)?&ft:'none'}"'
+
+set guifont=Inconsolata\ for\ Powerline:h15
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
