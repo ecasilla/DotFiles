@@ -30,6 +30,8 @@ nmap ci, f,cT,
 nmap da, f,ld2F,i,<ESC>l "delete argument 
 nmap ca, f,ld2F,i,<ESC>a "delete arg and insert
 
+ nnoremap <F5> :GundoToggle<CR>
+
 " delete surrounding characters
 noremap ds{ F{xf}x
 noremap cs{ F{xf}xi
