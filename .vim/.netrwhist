@@ -1,6 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/502190'
 let g:netrw_dirhist_2='/Users/502190/dev/coderbyte'
 let g:netrw_dirhist_3='/Users/502190'
 let g:netrw_dirhist_4='/Users/502190/dev/coderbyte'
+let g:netrw_dirhist_5='/Users/ecasilla/DotFiles'
+let g:netrw_dirhist_6='/Users/ecasilla/DotFiles/.vim/bundle'
+let g:netrw_dirhist_7='/Users/ecasilla/development/JavaScript-Koans'
+let g:netrw_dirhist_8='/Users/ecasilla/DotFiles'

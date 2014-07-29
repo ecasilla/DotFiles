@@ -69,8 +69,6 @@ set backupskip=/tmp/*,/private/tmp
 
  set wildignore+=*.orig                           " Merge resolution files
 
- match ErrorMsg '^(<\|=\|>\){7\}([^=].\+\)\?$')})
- 
 
 if version > 720
 	set undofile
