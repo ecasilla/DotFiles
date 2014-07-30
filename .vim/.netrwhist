@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/ecasilla/DotFiles'
 let g:netrw_dirhist_2='/Users/ecasilla/DotFiles/iterm'
 let g:netrw_dirhist_3='/Users/ecasilla/DotFiles/.bash'
+let g:netrw_dirhist_4='/Users/ecasilla/DotFiles'
+let g:netrw_dirhist_5='/Users/ecasilla/DotFiles/.bash/alias_lib'
+let g:netrw_dirhist_6='/Users/ecasilla/DotFiles'
