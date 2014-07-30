@@ -22,6 +22,11 @@ if [ -f /USER/${USER}/.bash/aliases ]; then
 	. /USER/${USER}/.bash/aliases
 fi
 
+GIT_PROMPT_ONLY_IN_REPO=1
+
+# as last entry source the gitprompt script
+source ~/.bash-git-prompt/gitprompt.sh
+
 export PATH=$PATH":/USER/${USER}/bin/"
 
 base_color='\[[48;5;24m\]'
