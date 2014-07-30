@@ -1,7 +1,7 @@
 ## Default configuration file for tmux-powerline.
- Modeline {
+# Modeline {
 	 vi: foldmarker={,} foldmethod=marker foldlevel=0 tabstop=2 filetype=sh
- }
+# }
 
  General {
 	# Show which segment fails and its exit code.
