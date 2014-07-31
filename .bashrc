@@ -3,9 +3,6 @@ export EDITOR="vim"
 
 set -o vi
 
-for i in ~/completion/*; do
-	. $i
-done
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -22,10 +19,11 @@ if [ -f /USER/${USER}/.bash/aliases ]; then
 	. /USER/${USER}/.bash/aliases
 fi
 
-GIT_PROMPT_ONLY_IN_REPO=1
+GIT_PROMPT_ONLY_IN_REPO=0
 
 # as last entry source the gitprompt script
 source ~/.bash-git-prompt/gitprompt.sh
+
 
 export PATH=$PATH":/USER/${USER}/bin/"
 
