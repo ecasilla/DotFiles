@@ -51,7 +51,7 @@
 # }
 
 
- #mailcount.sh {
+ mailcount.sh {
 	# Mailbox type to use. Can be any of {apple_mail, gmail, maildir, mbox}
 	export TMUX_POWERLINE_SEG_MAILCOUNT_MAILBOX_TYPE="gmail"
 	
@@ -77,9 +77,9 @@
 	## mbox
 	# Path to the mbox to check.
 	export TMUX_POWERLINE_SEG_MAILCOUNT_MBOX_INBOX=""
- #}
+ }
 
- #now_playing.sh {
+ now_playing.sh {
 	# Music player to use. Can be any of {audacious, banshee, cmus, itunes, lastfm, mocp, mpd, mpd_simple, pithos, rdio, rhythmbox, spotify, spotify_wine}.
 	export TMUX_POWERLINE_SEG_NOW_PLAYING_MUSIC_PLAYER="spotify"
 	# Maximum output length.

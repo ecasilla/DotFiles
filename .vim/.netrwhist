@@ -1,8 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/ecasilla/DotFiles/completion'
-let g:netrw_dirhist_2='/Users/ecasilla/DotFiles'
-let g:netrw_dirhist_3='/Users/ecasilla'
-let g:netrw_dirhist_4='/Users/ecasilla/DotFiles/.vim'
-let g:netrw_dirhist_5='/Users/ecasilla/development/Coder-Byte-JS'
-let g:netrw_dirhist_6='/Users/ecasilla/DotFiles'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/ecasilla/DotFiles'
+let g:netrw_dirhist_2='/Users/ecasilla/DotFiles/tmux/segments'
+let g:netrw_dirhist_3='/Users/ecasilla/DotFiles/tmux'
