@@ -1,1 +1,1 @@
-/Users/502190/dotfiles/.bash
+/Users/ecasilla/DotFiles/.bash

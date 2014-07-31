@@ -3,7 +3,7 @@ echo "Old .dotfiles moved to .file.old";
 
 INSTALLDIR=${1:-$HOME}
 
-for i in .gitignore .gitmodules .bash_profile.bash mongorc .bash_logout .pryrc .bashrc  bin  completion .tmux.conf .tmux-powerlinerc 
+for i in .gitignore .gitmodules .bash mongorc .bash_logout .pryrc .bashrc  bin  completion .tmux.conf .tmux-powerlinerc 
  
 do
 	mv $INSTALLDIR/$i $INSTALLDIR/$i.old 2> /dev/null
@@ -37,12 +37,14 @@ if [ ! -d $INSTALLDIR/.node-completion ]; then
 	mkdir $INSTALLDIR/.node-completion
 fi
 
+if [ ! -d $INSTALLDIR/.bash-git-prompt]; then
+	mkdir $INSTALLDIR/.bash-git-prompt
+fi
 if [ ! -d $INSTALLDIR/iterm]; then
 	mkdir $INSTALLDIR/.iterm
 fi
 
 cp $PWD/.osx $INSTALLDIR/.osx
-cp -rf  $PWD/.bash-git-prompt/ $INSTALLDIR/.bash-git-prompt
 cp $PWD/Npmfile $INSTALLDIR/Npmfile
 cp $PWD/brew_whitelist.json $INSTALLDIR/brew_whitelist.json
 cp $PWD/mongorc.js $INSTALLDIR/mongorc.js
