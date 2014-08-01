@@ -80,3 +80,18 @@
   path = .vim/bundle/tabular.vim 
   url= git://github.com/godlygeek/tabular.git
 
+[submodule ".vim/bundle/vim-repeat"]
+	path = .vim/bundle/vim-repeat
+	url = git://github.com/tpope/vim-repeat.git
+[submodule ".vim/bundle/delimitMate"]
+	path = .vim/bundle/delimitMate
+	url = git@github.com:Raimondi/delimitMate.git
+[submodule ".vim/bundle/MatchTagAlways"]
+	path = .vim/bundle/MatchTagAlways
+	url = git@github.com:Valloric/MatchTagAlways.git
+[submodule ".vim/bundle/css-vim"]
+	path = .vim/bundle/css-vim
+	url = git@github.com:JulesWang/css.vim.git
+[submodule ".vim/bundle/vim-json"]
+	path = .vim/bundle/vim-json
+	url = git@github.com:elzr/vim-json.git
