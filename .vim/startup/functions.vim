@@ -3,6 +3,10 @@ fun! Format_WhiteSpace_RemoveTrailing()
 	:%s/\v\s*$//g
 endfun
 
+fun! Remove_new_line_whitespace()
+  :%s/\r//g
+endfun
+
 fun! Format_Inflection_ToCamelCase()
 	:s/\v([a-z])_([a-z])/\1\u\2/g
 endfun
