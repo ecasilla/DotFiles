@@ -17,9 +17,9 @@ alias ll='ls -la'
 alias c='clear'
 alias v='vim'
 alias x="exit"
-alias ..='cd ..'
-alias ...='cd ../../../'
-alias ....='cd ../../../../'
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
 alias .....='cd ../../../../'
 mcd () { mkdir -p "$1" && cd "$1"; }
 
@@ -58,3 +58,7 @@ alias  gb='git branch'
 alias  gc='git checkout'
 alias  gff="git fetch -p && git rebase origin/\$(git_prompt_info)"
 
+
+
+export NVM_DIR="/Users/ecasilla/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
