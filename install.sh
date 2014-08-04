@@ -3,7 +3,7 @@ echo "Old .dotfiles moved to .file.old";
 
 INSTALLDIR=${1:-$HOME}
 
-for i in .gitignore .bash_prompt .gitmodules .bash mongorc .bash_logout .pryrc .bashrc  bin  completion .tmux.conf .tmux-powerlinerc  .bash_profile .nvm
+for i in .gitignore .gitmodules .bash mongorc .bash_logout .pryrc .bashrc  bin  completion .tmux.conf .tmux-powerlinerc  .bash_profile .nvm
  
 do
 	mv $INSTALLDIR/$i $INSTALLDIR/$i.old 2> /dev/null
