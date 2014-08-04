@@ -1,10 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Users/ecasilla/DotFiles'
-let g:netrw_dirhist_2='/Users/ecasilla/DotFiles/tmux/segments'
-let g:netrw_dirhist_3='/Users/ecasilla/DotFiles/tmux'
-let g:netrw_dirhist_4='/Users/ecasilla/development/Helios-landing'
-let g:netrw_dirhist_5='/Users/ecasilla/development'
-let g:netrw_dirhist_6='/Users/ecasilla/development/portfolio'
-let g:netrw_dirhist_7='/Users/ecasilla/DotFiles/.vim/startup'
-let g:netrw_dirhist_8='/Users/ecasilla/development/node_school/koa'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/ecasilla/DotFiles/.vim'
