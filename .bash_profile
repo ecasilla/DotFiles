@@ -2,6 +2,8 @@
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
 
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
@@ -60,6 +62,7 @@ alias  gff="git fetch -p && git rebase origin/\$(git_prompt_info)"
 
 
 
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export NVM_DIR="/Users/ecasilla/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export PATH=/usr/local/bin:$PATH

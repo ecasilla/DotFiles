@@ -34,33 +34,6 @@ begin
   require 'awesome_print'
   require 'awesome_print_colors'
 
-  # AwesomePrint.defaults={ 
-  #               :theme=>:solorized,
-  #               :indent => 2,
-  #               :sort_keys => true,
-  #               :color => {
-  #                 :args       => :greenish,
-  #                 :array      => :pale,
-  #                 :bigdecimal => :blue,
-  #                 :class      => :yellow,
-  #                 :date       => :greenish,
-  #                 :falseclass => :red,
-  #                 :fixnum     => :blue,
-  #                 :float      => :blue,
-  #                 :hash       => :pale,
-  #                 :keyword    => :cyan,
-  #                 :method     => :purpleish,
-  #                 :nilclass   => :red,
-  #                 :string     => :yellowish,
-  #                 :struct     => :pale,
-  #                 :symbol     => :cyanish,
-  #                 :time       => :greenish,
-  #                 :trueclass  => :green,
-  #                 :variable   => :cyanish
-  #             }
-  #          }
-
- 
   
   AwesomePrint.defaults={:theme=>:solorized}
 
@@ -259,4 +232,4 @@ module CodeRay
     end
 end
 
-# JazzHands.enable_syntax_highlighting_as_you_type
+#JazzHands.enable_syntax_highlighting_as_you_type

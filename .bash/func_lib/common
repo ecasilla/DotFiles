@@ -1,6 +1,10 @@
 # common functions
 hsearch() { history | grep $1 | grep -v hsearch; }
 
+function npmls() {
+  npm ls "$@" | grep ^[└├]
+}
+
 function phpstrict() {
 	if [ "$1" != "" ]
 	then

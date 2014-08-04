@@ -4,23 +4,21 @@ update
 # Packages
 install bower
 install brewcleaner
-install casperjs
+install browserify
 install chai
 install coffee-script
 install connect
 install dispatch-proxy
 install express
 install grunt-cli
-install gulp
 install jsonlint
+install meteorite
 install marked
 install mocha
 install node-inspector
 install nodemon
 install npm
-install phantomjs
-install browserify
-install yo
+install testem
 
 # Clean Up
 cache clean
