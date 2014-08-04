@@ -3,7 +3,7 @@ echo "Old .dotfiles moved to .file.old";
 
 INSTALLDIR=${1:-$HOME}
 
-for i in .gitignore .gitmodules .bash mongorc .bash_logout .pryrc .bashrc  bin  completion .tmux.conf .tmux-powerlinerc  .bash_profile .nvm
+for i in .gitignore .gitmodules .bash mongorc .bash_logout .pryrc .bashrc  bin  .tmux.conf .tmux-powerlinerc  .bash_profile 
  
 do
 	mv $INSTALLDIR/$i $INSTALLDIR/$i.old 2> /dev/null
@@ -29,18 +29,10 @@ cp $PWD/.gitconfig $INSTALLDIR/.gitconfig
 sed -i "s/%%GITNAME%%/$git_name/" $INSTALLDIR/.gitconfig
 sed -i "s/%%GITEMAIL%%/$git_email/" $INSTALLDIR/.gitconfig
 
-if [ ! -d $INSTALLDIR/.node-completion ]; then
-	mkdir $INSTALLDIR/.node-completion
-fi
-
-if [ ! -d $INSTALLDIR/.bash-git-prompt]; then
-	mkdir $INSTALLDIR/.bash-git-prompt
-fi
-if [ ! -d $INSTALLDIR/iterm]; then
-	mkdir $INSTALLDIR/iterm
-fi
 
 cp $PWD/.osx $INSTALLDIR/.osx
+cp -rf $PWD/.bash-git-prompt $INSTALLDIR/.bash-git-prompt
+cp -rf $PWD/iterm $INSTALLDIR/iterm
 cp $PWD/inputrc $INSTALLDIR/inputrc
 cp $PWD/bash_options $INSTALLDIR/bash_options
 cp $PWD/git-completion.bash $INSTALLDIR/git-completion.bash
