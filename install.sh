@@ -43,9 +43,9 @@ echo -ne "\nEmail: "
 read git_email
 
 echo
-sed -i ''  "s/%%GITNAME%%/$git_name/" $INSTALLDIR/.gitconfig
-sed -i ''  "s/%%GITEMAIL%%/$git_email/" $INSTALLDIR/.gitconfig
 cp $PWD/.gitconfig $INSTALLDIR/.gitconfig
+sed -i '' "s/%%GITNAME%%/$git_name/" $INSTALLDIR/.gitconfig
+sed -i '' "s/%%GITEMAIL%%/$git_email/" $INSTALLDIR/.gitconfig
 
 echo "   ______   ____     ____ __  __    ____    _   __   ______";
 echo "  / ____/  / __ \   / __ \\ \/ /   /  _/   / | / /  / ____/";
