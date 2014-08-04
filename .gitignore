@@ -104,3 +104,5 @@ erl_crash.dump
 
 .meteor/local
 .meteor/meteorite
+**/.netrwhist
+.vim/.netrwhist
