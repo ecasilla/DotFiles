@@ -19,6 +19,9 @@
 [submodule ".vim/bundle/threesome.vim"]
     path = .vim/bundle/threesome.vim
       url = https://github.com/sjl/threesome.vim
+[submodule ".vim/bundle/NERDtree"]
+    path = .vim/bundle/NERDtree
+    url = https://github.com/vim-scripts/The-NERD-tree.git
 [submodule ".vim/bundle/NERDtree.git"]
     path = .vim/bundle/NERDtree.git
       url = https://github.com/scrooloose/nerdtree.git
