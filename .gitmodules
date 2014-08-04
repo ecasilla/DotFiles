@@ -109,3 +109,6 @@
 [submodule ".nvm"]
 	path = .nvm
 	url = git@github.com:creationix/nvm.git
+[submodule "tmux/themes/"]
+	path = tmux/themes
+	url = git@github.com:seebi/tmux-colors-solarized.git
