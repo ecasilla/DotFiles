@@ -79,7 +79,10 @@ cask install evernote      || true
 cask install sublime-text  || true
 cask install slate         || true
 cask install dash          || true
-
+cask install robomongo     || true
+cask install bettertouchtool || true
+cask install onepassword    || true
+cask install daisydisk || true
 
 # Remove outdated versions
 cleanup
