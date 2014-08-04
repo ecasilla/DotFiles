@@ -112,3 +112,6 @@
 [submodule "tmux/themes/tmux-colors-solarized"]
 	path = tmux/themes/tmux-colors-solarized
 	url = git@github.com:seebi/tmux-colors-solarized.git
+[submodule "iterm/colors"]
+	path = iterm/colors
+	url = git@github.com:mbadolato/iTerm2-Color-Schemes.git
