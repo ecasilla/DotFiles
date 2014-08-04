@@ -1,6 +1,6 @@
 [[ -s ~/.bashrc ]] && source ~/.bashrc
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
-
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 
