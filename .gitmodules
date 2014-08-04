@@ -79,7 +79,6 @@
 [submodule ".vim/bundle/vim-tabular"]
   path = .vim/bundle/tabular.vim 
   url= git://github.com/godlygeek/tabular.git
-
 [submodule ".vim/bundle/vim-repeat"]
 	path = .vim/bundle/vim-repeat
 	url = git://github.com/tpope/vim-repeat.git
@@ -107,3 +106,9 @@
 [submodule ".vim/bundle/vim-autoreadwatch"]
 	path = .vim/bundle/vim-autoreadwatch
 	url = git@github.com:mutewinter/vim-autoreadwatch.git
+[submodule ".bash-git-prompt"]
+	path = .bash-git-prompt
+	url = git@github.com:magicmonty/bash-git-prompt.git
+[submodule ".nvm"]
+	path = .nvm
+	url = git@github.com:creationix/nvm.git
