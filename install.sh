@@ -96,6 +96,15 @@ echo "                                                                          
 git submodule init && git submodule update
 echo
 
+if hash brew 2>/dev/null; then
+  echo "    ____              __          __ __ _                  __  __                         ____                        __";
+  echo "   /  _/____   _____ / /_ ____ _ / // /(_)____   ____ _   / / / /____   ____ ___   ___   / __ ) _____ ___  _      __ / /";
+  echo "   / / / __ \ / ___// __// __ \`// // // // __ \ / __ \`/  / /_/ // __ \ / __ \`__ \ / _ \ / __  |/ ___// _ \| | /| / // / ";
+  echo " _/ / / / / /(__  )/ /_ / /_/ // // // // / / // /_/ /  / __  // /_/ // / / / / //  __// /_/ // /   /  __/| |/ |/ //_/  ";
+  echo "/___//_/ /_//____/ \__/ \__,_//_//_//_//_/ /_/ \__, /  /_/ /_/ \____//_/ /_/ /_/ \___//_____//_/    \___/ |__/|__/(_)   ";
+  echo "                                              /____/                                                                    ";
+  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+fi
 
 echo -n "Do you want to use my Home Brew configs? [n/Y]"
 read -n 1 use_brew_configs
