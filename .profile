@@ -1,2 +1,2 @@
 
-alias spotify = "osascript ~/SpotifyControl/SpotifyControl.scpt"
+alias spotify="osascript ~/SpotifyControl/SpotifyControl.scpt"
