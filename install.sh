@@ -66,6 +66,10 @@ cp $PWD/Npmfile $INSTALLDIR/Npmfile
 cp $PWD/brew_whitelist.json $INSTALLDIR/brew_whitelist.json
 cp $PWD/mongorc.js $INSTALLDIR/mongorc.js
 
+if [ ! -d $INSTALLDIR/.node-completion ]; then
+    mkdir $INSTALLDIR/.node-completion
+fi
+
 if [ ! -d $HOME/repos ]; then
 	mkdir $HOME/repos
 fi
