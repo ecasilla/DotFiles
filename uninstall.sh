@@ -7,25 +7,22 @@ echo "/ /_/ // / / // // / / /(__  )/ /_ / /_/ // // // // / / // /_/ /  / ___ |
 echo "\____//_/ /_//_//_/ /_//____/ \__/ \__,_//_//_//_//_/ /_/ \__, /  /_/  |_||__/|__/ \___//____/ \____//_/ /_/ /_/ \___//_/ /_/ \___//____//____/(_)   ";
 echo "                                                         /____/                                                                                      ";
 
-INSTALLDIR=${1:-$HOME}
-
-echo
-echo $INSTALLDIR
-echo
 
 for i in .hushlogin .spotify .psqlrc Brewfile .gitignore .gitmodules .bash mongorc .bash_logout .pryrc .bashrc  bin  .tmux.conf .tmux-powerlinerc  .bash_profile 
  
 do
-	rm -rf $INSTALLDIR/$i $INSTALLDIR/$i.old 2> /dev/null
-	rm  $PWD/$i $INSTALLDIR/$i;
+	rm i $HOME/$i;
 done;
 
-echo -n "Do you want to delet the vim configs? [n/Y]"
+rm -rf $HOME/.*.old
+rm -rf $HOME/*.old
+
+echo -n "Do you want to delete the vim configs? [n/Y]"
 read -n 1 remove_vim_configs
 
 if [ "$remove_vim_configs" == "Y" ]; then
-	ln -s $PWD/.vim $INSTALLDIR/.vim
-	ln -s $PWD/.vimrc $INSTALLDIR/.vimrc
+	rm -rf $HOME/.vim
+	rm -rf $HOME/.vimrc
 else
   echo
   echo " \\\  ///   .-.     ";
@@ -39,7 +36,7 @@ fi
 echo
 
 echo
-rm $PWD/.gitconfig $INSTALLDIR/.gitconfig
+rm  $HOME/.gitconfig
 
 echo "    ____         __       __         _              ";
 echo "   / __ \ ___   / /___   / /_ ___   (_)____   ____ _";
@@ -48,20 +45,32 @@ echo " / /_/ //  __// //  __// /_ /  __// // / / // /_/ / ";
 echo "/_____/ \___//_/ \___/ \__/ \___//_//_/ /_/ \__, /  ";
 echo "                                           /____/   ";
 
-rm $PWD/.osx $INSTALLDIR/.osx
-rm -rf $PWD/.bash-git-prompt $INSTALLDIR/.bash-git-prompt
-rm -rf $PWD/iterm $INSTALLDIR/iterm
-rm $PWD/inputrc $INSTALLDIR/inputrc
-rm $PWD/bash_options $INSTALLDIR/bash_options
-rm $PWD/git-completion.bash $INSTALLDIR/git-completion.bash
-rm $PWD/Npmfile $INSTALLDIR/Npmfile
-rm $PWD/brew_whitelist.json $INSTALLDIR/brew_whitelist.json
-rm $PWD/mongorc.js $INSTALLDIR/mongorc.js
+rm $HOME/.osx
+rm -rf $HOME/.bash-git-prompt
+rm -rf  $HOME/iterm
+rm $HOME/inputrc
+rm $HOME/bash_options
+rm $HOME/git-completion.bash
+rm $HOME/Npmfile
+rm $HOME/brew_whitelist.json
+rm $HOME/mongorc.js
+rm $HOME/.prev_dir
 
-if [ ! -d $HOME/repos ]; then
+if [  -d $HOME/repos ]; then
 	rm -rf $HOME/repos
 fi
 
+if [  -d $HOME/.node-completion ]; then
+	rm -rf $HOME/.node-completion
+fi
+
+if [  -d $HOME/iterm ]; then
+	rm -rf $HOME/iterm
+fi
+
+if [  -d $HOME/.nvm ]; then
+	rm -rf $HOME/.nvm
+fi
 echo "   __  __        _               __          __ __           __   ____          __       ";
 echo "  / / / /____   (_)____   _____ / /_ ____ _ / // /___   ____/ /  / __ \ ____   / /_ _____";
 echo " / / / // __ \ / // __ \ / ___// __// __ \`// // // _ \ / __  /  / / / // __ \ / __// ___/";
@@ -87,7 +96,7 @@ echo "                                       /____/                             
 
 for i in $(cat .brew_uninstall );  
   do
-    brew rm $(join <(brew leaves) <(brew deps "$i")) ; 
+    brew uninstall "$i"; 
  done
 
 else
