@@ -54,9 +54,11 @@ echo "/ /___   / /_/ /  / ____/  / /   _/ /    / /|  /  / /_/ /  ";
 echo "\____/   \____/  /_/      /_/   /___/   /_/ |_/   \____/   ";
 echo "                                                           ";
 
+if [ ! -d $HOME/iterm ]; then
+   cp -rf $PWD/iterm $INSTALLDIR/iterm
+fi
+
 cp $PWD/.osx $INSTALLDIR/.osx
-cp -rf $PWD/.bash-git-prompt $INSTALLDIR/.bash-git-prompt
-cp -rf $PWD/iterm $INSTALLDIR/iterm
 cp $PWD/inputrc $INSTALLDIR/inputrc
 cp $PWD/bash_options $INSTALLDIR/bash_options
 cp $PWD/git-completion.bash $INSTALLDIR/git-completion.bash
@@ -71,6 +73,7 @@ fi
 if [ ! -d $HOME/repos/tmux-powerline ]; then
 	git clone git://github.com/erikw/tmux-powerline.git $HOME/repos/tmux-powerline
 fi
+
 echo "    ____                                ______                             _                  ";
 echo "   / __ \  ____    ____   ___          / ____/  ____     ____    __  __   (_)   ____    ____ _";
 echo "  / / / / / __ \  / __ \ / _ \        / /      / __ \   / __ \  / / / /  / /   / __ \  / __ \`/";
@@ -95,6 +98,16 @@ echo "                                                                          
 
 git submodule init && git submodule update
 echo
+# copy these two folders once the submodules have installed
+
+if [ ! -d $HOME/.nvm ]; then
+    cp -rf $PWD/.nvm  $INSTALLDIR/.nvm
+fi
+
+if [ ! -d $HOME/.bash-git-prompt ]; then
+    cp -rf $PWD/.bash-git-prompt $INSTALLDIR/.bash-git-prompt
+fi
+
 
 if hash brew 2>/dev/null; then
   echo "    ____              __          __ __ _                  __  __                         ____                        __";

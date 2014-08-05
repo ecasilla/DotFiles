@@ -9,6 +9,10 @@ echo "                                                         /____/           
 
 INSTALLDIR=${1:-$HOME}
 
+echo
+echo $INSTALLDIR
+echo
+
 for i in .hushlogin .spotify .psqlrc Brewfile .gitignore .gitmodules .bash mongorc .bash_logout .pryrc .bashrc  bin  .tmux.conf .tmux-powerlinerc  .bash_profile 
  
 do
