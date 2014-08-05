@@ -60,7 +60,6 @@ alias  gc='git checkout'
 alias  gff="git fetch -p && git rebase origin/\$(git_prompt_info)"
 
 
-
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export NVM_DIR="/Users/ecasilla/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

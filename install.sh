@@ -11,7 +11,7 @@ echo "Old .dotfiles moved to .file.old";
 
 INSTALLDIR=${1:-$HOME}
 
-for i in .hushlogin .spotify .psqlrc Brewfile .gitignore .gitmodules .bash mongorc .bash_logout .pryrc .bashrc  bin  .tmux.conf .tmux-powerlinerc  .bash_profile 
+for i in .profile .hushlogin .spotify .psqlrc Brewfile .gitignore .gitmodules .bash mongorc .bash_logout .pryrc .bashrc  bin  .tmux.conf .tmux-powerlinerc  .bash_profile 
  
 do
 	mv $INSTALLDIR/$i $INSTALLDIR/$i.old 2> /dev/null
@@ -58,6 +58,9 @@ if [ ! -d $HOME/iterm ]; then
    cp -rf $PWD/iterm $INSTALLDIR/iterm
 fi
 
+if [ ! -d $HOME/SpotifyControl ]; then
+   cp -rf $PWD/SpotifyControl $INSTALLDIR/SpotifyControl
+fi
 cp $PWD/.osx $INSTALLDIR/.osx
 cp $PWD/inputrc $INSTALLDIR/inputrc
 cp $PWD/bash_options $INSTALLDIR/bash_options
