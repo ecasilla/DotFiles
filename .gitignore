@@ -107,3 +107,4 @@ erl_crash.dump
 **/.netrwhist
 .vim/.netrwhist
 .bash/.bash
+node_modules/

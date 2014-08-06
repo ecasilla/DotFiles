@@ -165,10 +165,11 @@ echo " / /|  /    / /_/ / / / / / / /        _/ /    / / / / (__  ) / /_  / /_/ 
 echo "/_/ |_/    / .___/ /_/ /_/ /_/        /___/   /_/ /_/ /____/  \__/  \__,_/  /_/   /_/   /_/   /_/ /_/  \__, /  (_)   ";
 echo "          /_/                                                                                         /____/         ";
 
-for i in $(cat Npmfile);
-  do
-    npm install -g "$i"
-  done
+echo "Become the master of your globals!!"
+sudo chown -R $USER /usr/local
+npm install
+node npm-script.js
+
 else
   echo
   echo " \\\  ///   .-.     ";
