@@ -36,16 +36,24 @@ else
 fi
 echo
 
-echo "Git config settings"
+echo "Git && Npm config settings"
 echo -n "Name: "
-read git_name
+read name
 echo -ne "\nEmail: "
-read git_email
+read email
+echo -n "Website/blog: "
+read url
 
 echo
 cp $PWD/.gitconfig $INSTALLDIR/.gitconfig
-sed -i '' "s/%%GITNAME%%/$git_name/" $INSTALLDIR/.gitconfig
-sed -i '' "s/%%GITEMAIL%%/$git_email/" $INSTALLDIR/.gitconfig
+sed -i '' "s/%%GITNAME%%/$name/" $INSTALLDIR/.gitconfig
+sed -i '' "s/%%GITEMAIL%%/$email/" $INSTALLDIR/.gitconfig
+
+
+cp $PWD/.npmrc $INSTALLDIR/.npmrc
+sed -i '' "s/%%NPMNAME%%/$name/" $INSTALLDIR/.npmrc
+sed -i '' "s/%%NPMEMAIL%%/$email/" $INSTALLDIR/.npmrc
+sed -i '' "s/%%NPMURL%%/$url/" $INSTALLDIR/.npmrc
 
 echo "   ______   ____     ____ __  __    ____    _   __   ______";
 echo "  / ____/  / __ \   / __ \\ \/ /   /  _/   / | / /  / ____/";
@@ -87,6 +95,12 @@ echo "  / / / / / __ \  / __ \ / _ \        / /      / __ \   / __ \  / / / /  /
 echo " / /_/ / / /_/ / / / / //  __/       / /___   / /_/ /  / /_/ / / /_/ /  / /   / / / / / /_/ / ";
 echo "/_____/  \____/ /_/ /_/ \___/        \____/   \____/  / .___/  \__, /  /_/   /_/ /_/  \__, /  ";
 echo "                                                     /_/      /____/                 /____/   ";
+
+echo
+echo
+echo
+echo
+echo
 
 echo
 echo "    ____                   __             __    __    _                  ";
@@ -138,7 +152,7 @@ echo "  \__ \  / __/ / __ \`/  / ___/ / __/  / /   / __ \  / __ \`/         / / 
 echo " ___/ / / /_  / /_/ /  / /    / /_   / /   / / / / / /_/ /         / /    / /_/ /        / /_/ /  / /    /  __/| |/ |/ / ";
 echo "/____/  \__/  \__,_/  /_/     \__/  /_/   /_/ /_/  \__, /         /_/     \____/        /_____/  /_/     \___/ |__/|__/  ";
 echo "                                                  /____/                                                                 ";
-
+brew update
 brew bundle
 else
   echo
