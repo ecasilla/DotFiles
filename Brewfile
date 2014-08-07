@@ -85,6 +85,13 @@ cask install daisydisk || true
 cask install caffeine || true
 cask install google-hangouts || true
 cask install iterm2 || true
+cask install cheatsheet || true
+cask install bartender || true
+
+#install fonts
+brew tap caskroom/fonts 
+cask install font-inconsolata || true
+cask install font-inconsolata-dz-for-powerline || true
 
 
 # Remove outdated versions
