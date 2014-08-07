@@ -84,5 +84,8 @@ cask install onepassword    || true
 cask install daisydisk || true
 cask install caffeine || true
 cask install google-hangouts || true
+cask install iterm2 || true
+
+
 # Remove outdated versions
 cleanup
