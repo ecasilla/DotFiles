@@ -118,3 +118,6 @@
 [submodule "SpotifyControl"]
 	path = SpotifyControl
 	url = git@github.com:dronir/SpotifyControl.git
+[submodule ".vim/bundle/supertab-vim"]
+	path = .vim/bundle/supertab-vim
+	url = git@github.com:ervandew/supertab.git
