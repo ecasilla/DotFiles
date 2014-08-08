@@ -121,3 +121,6 @@
 [submodule ".vim/bundle/supertab-vim"]
 	path = .vim/bundle/supertab-vim
 	url = git@github.com:ervandew/supertab.git
+[submodule ".vim/bundle/vim-less"]
+	path = .vim/bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git
