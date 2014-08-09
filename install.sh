@@ -11,7 +11,7 @@ echo "Old .dotfiles moved to .file.old";
 
 INSTALLDIR=${1:-$HOME}
 
-for i in .profile .hushlogin .spotify .psqlrc Brewfile .gitignore .gitmodules .bash mongorc .bash_logout .pryrc .bashrc  bin  .tmux.conf .tmux-powerlinerc  .bash_profile 
+for i in .profile .hushlogin .psqlrc Brewfile .gitignore .gitmodules .bash mongorc .bash_logout .pryrc .bashrc  bin  .tmux.conf .tmux-powerlinerc  .bash_profile 
  
 do
 	mv $INSTALLDIR/$i $INSTALLDIR/$i.old 2> /dev/null
@@ -54,13 +54,6 @@ echo "/ /___   / /_/ /  / ____/  / /   _/ /    / /|  /  / /_/ /  ";
 echo "\____/   \____/  /_/      /_/   /___/   /_/ |_/   \____/   ";
 echo "                                                           ";
 
-if [ ! -d $HOME/iterm ]; then
-   cp -rf $PWD/iterm $INSTALLDIR/iterm
-fi
-
-if [ ! -d $HOME/SpotifyControl ]; then
-   cp -rf $PWD/SpotifyControl $INSTALLDIR/SpotifyControl
-fi
 cp $PWD/.osx $INSTALLDIR/.osx
 cp $PWD/inputrc $INSTALLDIR/inputrc
 cp $PWD/bash_options $INSTALLDIR/bash_options
@@ -73,13 +66,6 @@ if [ ! -d $INSTALLDIR/.node-completion ]; then
     mkdir $INSTALLDIR/.node-completion
 fi
 
-if [ ! -d $HOME/repos ]; then
-	mkdir $HOME/repos
-fi
-
-if [ ! -d $HOME/repos/tmux-powerline ]; then
-	git clone git://github.com/erikw/tmux-powerline.git $HOME/repos/tmux-powerline
-fi
 
 echo "    ____                                ______                             _                  ";
 echo "   / __ \  ____    ____   ___          / ____/  ____     ____    __  __   (_)   ____    ____ _";
@@ -89,32 +75,6 @@ echo "/_____/  \____/ /_/ /_/ \___/        \____/   \____/  / .___/  \__, /  /_/
 echo "                                                     /_/      /____/                 /____/   ";
 
 echo
-echo "    ____                   __             __    __    _                  ";
-echo "   /  _/   ____    _____  / /_  ____ _   / /   / /   (_)   ____    ____ _";
-echo "   / /    / __ \  / ___/ / __/ / __ \`/  / /   / /   / /   / __ \  / __ \`/";
-echo " _/ /    / / / / (__  ) / /_  / /_/ /  / /   / /   / /   / / / / / /_/ / ";
-echo "/___/   /_/ /_/ /____/  \__/  \__,_/  /_/   /_/   /_/   /_/ /_/  \__, /  ";
-echo "                                                                /____/   ";
-echo
-echo "   ______    ____  ______          _____            __                            __            __              ";
-echo "  / ____/   /  _/ /_  __/         / ___/  __  __   / /_    ____ ___   ____   ____/ /  __  __   / /  ___    _____";
-echo " / / __     / /    / /            \__ \  / / / /  / __ \  / __ \`__ \ / __ \ / __  /  / / / /  / /  / _ \  / ___/";
-echo "/ /_/ /   _/ /    / /            ___/ / / /_/ /  / /_/ / / / / / / // /_/ // /_/ /  / /_/ /  / /  /  __/ (__  ) ";
-echo "\____/   /___/   /_/            /____/  \__,_/  /_.___/ /_/ /_/ /_/ \____/ \__,_/   \__,_/  /_/   \___/ /____/  ";
-echo "                                                                                                                ";
-
-git submodule init && git submodule update
-echo
-# copy these two folders once the submodules have installed
-
-if [ ! -d $HOME/.nvm ]; then
-    cp -rf $PWD/.nvm  $INSTALLDIR/.nvm
-fi
-
-if [ ! -d $HOME/.bash-git-prompt ]; then
-    cp -rf $PWD/.bash-git-prompt $INSTALLDIR/.bash-git-prompt
-fi
-
 
 if hash brew 2>/dev/null; then
   echo "    ____              __          __ __ _                  __  __                         ____                        __";
@@ -152,7 +112,50 @@ else
 fi
 
 
-echo -n "Do you want to use my Npm -g modules ? [n/Y]"
+echo
+echo "    ____                   __             __    __    _                  ";
+echo "   /  _/   ____    _____  / /_  ____ _   / /   / /   (_)   ____    ____ _";
+echo "   / /    / __ \  / ___/ / __/ / __ \`/  / /   / /   / /   / __ \  / __ \`/";
+echo " _/ /    / / / / (__  ) / /_  / /_/ /  / /   / /   / /   / / / / / /_/ / ";
+echo "/___/   /_/ /_/ /____/  \__/  \__,_/  /_/   /_/   /_/   /_/ /_/  \__, /  ";
+echo "                                                                /____/   ";
+echo
+echo "   ______    ____  ______          _____            __                            __            __              ";
+echo "  / ____/   /  _/ /_  __/         / ___/  __  __   / /_    ____ ___   ____   ____/ /  __  __   / /  ___    _____";
+echo " / / __     / /    / /            \__ \  / / / /  / __ \  / __ \`__ \ / __ \ / __  /  / / / /  / /  / _ \  / ___/";
+echo "/ /_/ /   _/ /    / /            ___/ / / /_/ /  / /_/ / / / / / / // /_/ // /_/ /  / /_/ /  / /  /  __/ (__  ) ";
+echo "\____/   /___/   /_/            /____/  \__,_/  /_.___/ /_/ /_/ /_/ \____/ \__,_/   \__,_/  /_/   \___/ /____/  ";
+echo "                                                                                                                ";
+
+git submodule init && git submodule update
+echo
+# copy these two folders once the submodules have installed
+
+if [ ! -d $HOME/.nvm ]; then
+    cp -rf $PWD/.nvm  $INSTALLDIR/.nvm
+fi
+
+if [ ! -d $HOME/.bash-git-prompt ]; then
+    cp -rf $PWD/.bash-git-prompt $INSTALLDIR/.bash-git-prompt
+fi
+
+if [ ! -d $HOME/iterm ]; then
+   cp -rf $PWD/iterm $INSTALLDIR/iterm
+fi
+
+if [ ! -d $HOME/SpotifyControl ]; then
+   cp -rf $PWD/SpotifyControl $INSTALLDIR/SpotifyControl
+fi
+
+if [ ! -d $HOME/repos ]; then
+  mkdir $HOME/repos
+fi
+
+if [ ! -d $HOME/repos/tmux-powerline ]; then
+  git clone git://github.com/erikw/tmux-powerline.git $HOME/repos/tmux-powerline
+fi
+
+echo -n "Do you want to use my Npm Modules ? [n/Y]"
 read -n 1 use_npm_configs
 
 if [ "$use_npm_configs" == "Y" ]; then
@@ -167,7 +170,8 @@ echo "          /_/                                                             
 
 for i in $(cat Npmfile);
   do
-    npm install -g "$i"
+   sudo chown -R $USER /usr/local
+   echo "$i"
   done
 else
   echo

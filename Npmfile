@@ -1,7 +1,5 @@
-# Update
 update
 
-# Packages
 install bower
 install brewcleaner
 install browserify
@@ -12,14 +10,11 @@ install dispatch-proxy
 install express
 install grunt-cli
 install jsonlint
-install meteorite
-install marked
 install mocha
 install node-inspector
 install nodemon
-install npm
 install testem
+install forever
 
-# Clean Up
 cache clean
 
