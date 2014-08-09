@@ -1,0 +1,23 @@
+{
+  "name": "DotFiles",
+  "version": "0.0.0",
+  "description": "These are my Dotfiles",
+  "main": "npm-script.js",
+  "dependencies": {
+    "npm": "^1.4.23"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ecasilla/DotFiles.git"
+  },
+  "author": "Ernie Casilla",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ecasilla/DotFiles/issues"
+  },
+  "homepage": "https://github.com/ecasilla/DotFiles"
+}

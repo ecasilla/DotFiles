@@ -1,20 +1,21 @@
-update
+bower
+istanbul
+plato
+brewcleaner
+browserify
+chai
+coffee-script
+connect
+dispatch-proxy
+express
+grunt-cli
+jsonlint
+marked
+mocha
+node-inspector
+nodemon
+testem
 
-install bower
-install brewcleaner
-install browserify
-install chai
-install coffee-script
-install connect
-install dispatch-proxy
-install express
-install grunt-cli
-install jsonlint
-install mocha
-install node-inspector
-install nodemon
-install testem
-install forever
 
-cache clean
+
 

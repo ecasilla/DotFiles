@@ -36,16 +36,24 @@ else
 fi
 echo
 
-echo "Git config settings"
+echo "Git && Npm config settings"
 echo -n "Name: "
-read git_name
+read name
 echo -ne "\nEmail: "
-read git_email
+read email
+echo -n "Website/blog: "
+read url
 
 echo
 cp $PWD/.gitconfig $INSTALLDIR/.gitconfig
-sed -i '' "s/%%GITNAME%%/$git_name/" $INSTALLDIR/.gitconfig
-sed -i '' "s/%%GITEMAIL%%/$git_email/" $INSTALLDIR/.gitconfig
+sed -i '' "s/%%GITNAME%%/$name/" $INSTALLDIR/.gitconfig
+sed -i '' "s/%%GITEMAIL%%/$email/" $INSTALLDIR/.gitconfig
+
+
+cp $PWD/.npmrc $INSTALLDIR/.npmrc
+sed -i '' "s/%%NPMNAME%%/$name/" $INSTALLDIR/.npmrc
+sed -i '' "s/%%NPMEMAIL%%/$email/" $INSTALLDIR/.npmrc
+sed -i '' "s/%%NPMURL%%/$url/" $INSTALLDIR/.npmrc
 
 echo "   ______   ____     ____ __  __    ____    _   __   ______";
 echo "  / ____/  / __ \   / __ \\ \/ /   /  _/   / | / /  / ____/";
@@ -98,7 +106,7 @@ echo "  \__ \  / __/ / __ \`/  / ___/ / __/  / /   / __ \  / __ \`/         / / 
 echo " ___/ / / /_  / /_/ /  / /    / /_   / /   / / / / / /_/ /         / /    / /_/ /        / /_/ /  / /    /  __/| |/ |/ / ";
 echo "/____/  \__/  \__,_/  /_/     \__/  /_/   /_/ /_/  \__, /         /_/     \____/        /_____/  /_/     \___/ |__/|__/  ";
 echo "                                                  /____/                                                                 ";
-
+brew update
 brew bundle
 else
   echo
@@ -168,11 +176,19 @@ echo " / /|  /    / /_/ / / / / / / /        _/ /    / / / / (__  ) / /_  / /_/ 
 echo "/_/ |_/    / .___/ /_/ /_/ /_/        /___/   /_/ /_/ /____/  \__/  \__,_/  /_/   /_/   /_/   /_/ /_/  \__, /  (_)   ";
 echo "          /_/                                                                                         /____/         ";
 
+<<<<<<< HEAD
 for i in $(cat Npmfile);
   do
    sudo chown -R $USER /usr/local
    echo "$i"
   done
+=======
+echo "Become the master of your globals!!"
+sudo chown -R $USER /usr/local
+npm install
+node npm-script.js
+
+>>>>>>> 2ae9a70bf74ca18d25098c587c8a31d90a893c85
 else
   echo
   echo " \\\  ///   .-.     ";

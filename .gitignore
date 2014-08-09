@@ -2,8 +2,6 @@
 */.DS_Store
 *.swp
 *.swo
-[._]*.s[a-w][a-z]
-[._]s[a-w][a-z]
 *.un~
 Session.vim
 .netrwhist
@@ -104,6 +102,5 @@ erl_crash.dump
 
 .meteor/local
 .meteor/meteorite
-**/.netrwhist
-.vim/.netrwhist
 .bash/.bash
+node_modules/

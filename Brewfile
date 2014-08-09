@@ -68,7 +68,7 @@ install xz  || true
 
 # Casks
 install brew-cask
-cask install google-chrome-canary|| true
+cask install google-chromey|| true
 cask install iterm2        || true
 cask install mou           || true
 cask install spotify       || true
@@ -77,12 +77,22 @@ cask install hipchat       || true
 cask install alfred        || true
 cask install evernote      || true
 cask install sublime-text  || true
-cask install slate         || true
 cask install dash          || true
 cask install robomongo     || true
 cask install bettertouchtool || true
 cask install onepassword    || true
 cask install daisydisk || true
+cask install caffeine || true
+cask install google-hangouts || true
+cask install iterm2 || true
+cask install cheatsheet || true
+cask install bartender || true
+
+#install fonts
+brew tap caskroom/fonts 
+cask install font-inconsolata || true
+cask install font-inconsolata-dz-for-powerline || true
+
 
 # Remove outdated versions
 cleanup
