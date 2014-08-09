@@ -176,19 +176,16 @@ echo " / /|  /    / /_/ / / / / / / /        _/ /    / / / / (__  ) / /_  / /_/ 
 echo "/_/ |_/    / .___/ /_/ /_/ /_/        /___/   /_/ /_/ /____/  \__/  \__,_/  /_/   /_/   /_/   /_/ /_/  \__, /  (_)   ";
 echo "          /_/                                                                                         /____/         ";
 
-<<<<<<< HEAD
 for i in $(cat Npmfile);
   do
    sudo chown -R $USER /usr/local
    echo "$i"
   done
-=======
 echo "Become the master of your globals!!"
 sudo chown -R $USER /usr/local
 npm install
 node npm-script.js
 
->>>>>>> 2ae9a70bf74ca18d25098c587c8a31d90a893c85
 else
   echo
   echo " \\\  ///   .-.     ";
