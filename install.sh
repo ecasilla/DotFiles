@@ -137,7 +137,7 @@ echo "                                                                          
 
 git submodule init && git submodule update
 echo
-# copy these two folders once the submodules have installed
+# copy these folders once the submodules have installed
 
 if [ ! -d $HOME/.nvm ]; then
     cp -rf $PWD/.nvm  $INSTALLDIR/.nvm
