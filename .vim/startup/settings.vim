@@ -34,7 +34,6 @@ set foldcolumn=1
 set cc=+1,+2
 
 set linespace=0
-set history=1000
 set list listchars=tab:› ,trail:-,extends:>,precedes:<,eol:¬
 
 set laststatus=2
@@ -45,8 +44,6 @@ set ttym=xterm2
 
 set wrap
 set tags=~/.vim/tags/tags
-
-set backupskip=/tmp/*,/private/tmp
 
 " Save when losing focus
  au FocusLost * :silent! wall
@@ -134,4 +131,20 @@ noremap <leader>ss :SaveSession
 noremap <leader>sd :DeleteSession<CR>
 noremap <leader>sc :CloseSession<CR>
 
+let g:gundo_width = 60
+let g:gundo_preview_height = 40
+let g:gundo_right = 1
 
+" directory settings
+call system('mkdir -vp ~/.backup/undo/ > /dev/null 2>&1')
+set backupdir=~/.backup,.       " list of directories for the backup file
+set directory=~/.backup,~/tmp,. " list of directory names for the swap file
+set backupskip+=~/tmp/*,/private/tmp/* 
+set undodir=~/.backup/undo/,~/tmp,.
+set backup
+set writebackup
+set noswapfile
+
+set undofile
+set history=500
+set undolevels=100

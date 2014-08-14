@@ -30,7 +30,7 @@ nmap ci, f,cT,
 nmap da, f,ld2F,i,<ESC>l "delete argument 
 nmap ca, f,ld2F,i,<ESC>a "delete arg and insert
 
- nnoremap <F5> :GundoToggle<CR>
+map <leader>g :GundoToggle<CR>
 
 " delete surrounding characters
 noremap ds{ F{xf}x
@@ -74,3 +74,31 @@ nmap { {zz
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 nmap <silent> <C-D> :NERDTreeToggle<CR>
+
+" open vimrc
+nnoremap <leader>v :e  ~/DotFiles/.vim/startup/settings.vim<CR>
+nnoremap <leader>V :tabnew ~/DotFiles/.vim/startup/settings.vim<CR>
+
+
+" reload all open buffers
+nnoremap <leader>Ra :tabdo exec "windo e!"
+
+" Use regular replace
+nnoremap <leader>s :%s /
+vnoremap <leader>s :%s /
+
+" Use :Subvert replace
+nnoremap <leader>S :%S /
+vnoremap <leader>S :%S /
+
+nmap <leader>f <Plug>(easymotion-f2)
+nmap <leader>F <Plug>(easymotion-F2)
+
+nnoremap <leader>a :Ag! 
+
+" angularjs syntasic ovveride
+ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+ let g:syntastic_mode_map={ 'mode': 'active',
+                      \ 'active_filetypes': [],
+                                           \ 'passive_filetypes': ['html'] }
+                                           "
