@@ -115,3 +115,23 @@ set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
 set termencoding=utf-8
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+if executable("ag")
+  let g:ackprg = "ag --nogroup --column"
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
+"session mangement
+let g:session_directory="~/.vim/session"
+let g:session_autoload="no"
+let g:session_autosave= "no"
+let g:session_command_aliases= 1
+
+noremap <leader>so :OpenSession
+noremap <leader>ss :SaveSession
+noremap <leader>sd :DeleteSession<CR>
+noremap <leader>sc :CloseSession<CR>
+
+
