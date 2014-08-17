@@ -148,3 +148,6 @@
 [submodule ".vim/bundle/vim-mocha"]
 	path = .vim/bundle/vim-mocha
 	url = git@github.com:geekjuice/vim-mocha.git
+[submodule ".vim/bundle/vim-go"]
+	path = .vim/bundle/vim-go
+	url = git@github.com:fatih/vim-go.git
