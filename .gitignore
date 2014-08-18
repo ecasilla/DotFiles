@@ -104,3 +104,4 @@ erl_crash.dump
 .meteor/meteorite
 .bash/.bash
 node_modules/
+iterm/.DS_Store
