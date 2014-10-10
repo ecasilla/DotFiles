@@ -33,6 +33,7 @@ install autoconf                    || true
 install automake                    || true
 install casperjs                    || true
 install cscope                      || true
+install ctags                       || true
 install fontconfig                  || true
 install fontforge                   || true
 install freetype                    || true
