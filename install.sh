@@ -159,6 +159,10 @@ if [ ! -d $HOME/repos ]; then
   mkdir $HOME/repos
 fi
 
+if [ ! -d $HOME/.git_template ]; then
+  mkdir $HOME/.git_template
+fi
+
 if [ ! -d $HOME/repos/tmux-powerline ]; then
   git clone git://github.com/erikw/tmux-powerline.git $HOME/repos/tmux-powerline
 fi
