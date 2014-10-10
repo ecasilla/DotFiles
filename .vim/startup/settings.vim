@@ -106,7 +106,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_section_x=""
 let g:airline_section_y="%{strlen(&ft)?&ft:'none'}"
 
-set guifont=Inconsolata\ for\ Powerline:h15
+set guifont=Inconsolata\ for\ Powerline:h18
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 set t_Co=256
@@ -114,7 +114,7 @@ set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
 set termencoding=utf-8
 
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|.git'
 
 if executable("ag")
   let g:ackprg = "ag --nogroup --column"
@@ -136,6 +136,12 @@ let g:gundo_width = 60
 let g:gundo_preview_height = 40
 let g:gundo_right = 1
 
+let g:snipMate = {}
+let g:snipMate.scope_aliases = {} 
+let g:snipMate.scope_aliases['js'] = 'javascript,javascript-jquery,javascript.node'
+let g:snipMate.scope_aliases['html'] = 'javascript,javascript-jquery,javascript.node'
+
+
 " directory settings
 call system('mkdir -vp ~/.backup/undo/ > /dev/null 2>&1')
 set backupdir=~/.backup,.       " list of directories for the backup file
@@ -149,3 +155,6 @@ set noswapfile
 set undofile
 set history=500
 set undolevels=100
+
+scriptencoding utf-8
+

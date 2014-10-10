@@ -20,6 +20,7 @@ source ~/.vim/startup/commands.vim
 source ~/.vim/startup/functions.vim
 source ~/.vim/startup/mappings.vim
 source ~/.vim/startup/settings.vim
+source ~/.vim/startup/gvimrc.vim
 
 " Syntax-specific settings
 source ~/.vim/startup/js.vim
@@ -27,5 +28,5 @@ source ~/.vim/startup/vim.vim
 source ~/.vim/startup/yaml.vim
 
 if &diff
-	color hybrid
+	color molokai
 endif
