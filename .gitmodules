@@ -160,3 +160,6 @@
 [submodule ".vim/bundle/vim-abolish"]
 	path = .vim/bundle/vim-abolish
 	url = git://github.com/tpope/vim-abolish.git
+[submodule ".vim/bundle/angular-vim-snippets"]
+	path = .vim/bundle/angular-vim-snippets
+	url = git@github.com:matthewsimo/angular-vim-snippets.git
