@@ -163,3 +163,6 @@
 [submodule ".vim/bundle/angular-vim-snippets"]
 	path = .vim/bundle/angular-vim-snippets
 	url = git@github.com:matthewsimo/angular-vim-snippets.git
+[submodule ".vim/bundle/vim-multiple-cursors"]
+	path = .vim/bundle/vim-multiple-cursors
+	url = git@github.com:terryma/vim-multiple-cursors.git
