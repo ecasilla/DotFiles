@@ -1,4 +1,4 @@
-"============== Custom Commands ===============
+"============== Custom Commands =============== {{{
 command -nargs=0 Sinit :call <SID>Sinit('%:p:h')
 command -nargs=? W :w <args>
 augroup AutoMkdir
@@ -14,5 +14,10 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 augroup FixProportionsOnResize
     au!
       au VimResized * exe "normal! \<c-w>="
-    augroup END
+augroup END
 
+augroup filetype_vim
+  autocmd!
+  autocmd FileType vim setlocal foldmethod=marker
+augroup END
+"}}}

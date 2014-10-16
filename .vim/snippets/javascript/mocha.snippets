@@ -1,0 +1,65 @@
+snippet af
+	after(function(){
+	  ${1}
+	});
+
+snippet afa
+	after(function(${1:done}){
+		${2}
+		$1();
+	});
+snippet afe
+	afterEach(function(){
+	  ${1}
+	});
+snippet afea
+	afterEach(function(${1:done}){
+	${2}
+	$1();
+	});
+
+snippet bef
+	before(function(){
+	${1}
+	});
+
+snippet befa
+	before(function(${1:done}){
+	  ${2}
+	  $1();
+	});
+
+snippet befe
+	beforeEach(function(){
+	${1}
+	});
+
+snippet befea
+	beforeEach(function(${1:done}){
+	${2}
+	$1();
+	});
+
+snippet desc
+	describe('${1:feature}', function(){
+	  ${2}
+	});
+
+snippet it
+	  it('${1:should do something}', function(){
+	  ${2}
+	});
+snippet ita
+	  it('${1:should do something}', function(${2:done}){
+	  ${3}
+	  $2();
+	});
+snippet xit
+	xit('${1:should do something}', function() {
+	  ${2}
+	});
+snippet xita
+	xit('${1:should do something}', function(${2:done}){
+	  ${3}
+	  $2();
+	});

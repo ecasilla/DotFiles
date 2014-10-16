@@ -70,15 +70,13 @@ install xz                          || true
 
 # Casks
 install brew-cask
-cask install google-chromey|| true
-cask install iterm2           || true
+cask install google-chrome    || true
 cask install mou              || true
 cask install spotify          || true
 cask install dropbox          || true
 cask install hipchat          || true
 cask install alfred           || true
 cask install evernote         || true
-cask install sublime-text     || true
 cask install dash             || true
 cask install robomongo        || true
 cask install bettertouchtool  || true
