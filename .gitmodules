@@ -16,9 +16,6 @@
 [submodule ".vim/bundle/fugitive.vim"]
     path = .vim/bundle/fugitive.vim
       url = https://github.com/tpope/vim-fugitive.git
-[submodule ".vim/bundle/threesome.vim"]
-    path = .vim/bundle/threesome.vim
-      url = https://github.com/sjl/threesome.vim
 [submodule ".vim/bundle/NERDtree"]
     path = .vim/bundle/NERDtree
     url = https://github.com/vim-scripts/The-NERD-tree.git
@@ -169,3 +166,6 @@
 [submodule ".vim/bundle/dash.vim"]
 	path = .vim/bundle/dash.vim
 	url = https://github.com/rizzatti/dash.vim.git
+[submodule ".vim/bundle/splice.vim"]
+	path = .vim/bundle/splice.vim
+	url = https://github.com/sjl/splice.vim.git
