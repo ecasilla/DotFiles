@@ -60,6 +60,7 @@ set tags=~/.vim/tags/tags
  set wildignore+=*.sw?                            " Vim swap files
  set wildignore+=*.DS_Store                       " OSX bullshit
 
+
  set wildignore+=*.luac                           " Lua byte code
 
  set wildignore+=migrations                       " Django migrations
@@ -109,11 +110,14 @@ set guifont=Inconsolata\ for\ Powerline:h18
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
-set term=xterm-256color
+set term=screen-256color
 set termencoding=utf-8
 
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|.git'
 
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](doc|tmp|node_modules|bower_components)',
+  \ 'file': '\v\.(exe|so|dll|DS_Store)$',
+  \ }
 if executable("ag")
   let g:ackprg = "ag --nogroup --column"
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
