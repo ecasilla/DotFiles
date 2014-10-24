@@ -48,7 +48,7 @@ if has("eval")
     elseif has('gui_gtk')
         call SetFont("Monospace\ 9")
     elseif has('gui_macvim')
-        call SetFont('Inconsolata-dz:h20')
+        call SetFont('Inconsolata-dz\ for\ Powerline:h20')
     else
         " use default
     endif
