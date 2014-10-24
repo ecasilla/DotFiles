@@ -86,28 +86,26 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 
+let g:Powerline_symbols = 'fancy'
 "unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
 let g:airline_symbols.linenr = '␊'
 let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
+
 let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_powerline_fonts=1
 let g:airline_theme='hybrid'
-let g:airline_left_sep = ' '
-let g:airline_right_sep = ' '
 let g:airline#extensions#tabline#enabled = 1
+
+
 let g:airline_section_x=""
 let g:airline_section_y="%{strlen(&ft)?&ft:'none'}"
 
 set guifont=Inconsolata\ for\ Powerline:h18
-let g:Powerline_symbols = 'fancy'
+
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
@@ -157,4 +155,84 @@ set history=500
 set undolevels=100
 
 scriptencoding utf-8
+
+"---------------------------------------------
+" G/Vim settings file 
+"---------------------------------------------
+
+" Set the default size
+if has('gui_win32') || has('gui_win64')
+    set lines=35
+    set columns=130
+elseif has('gui_macvim')
+    set lines=95
+    set columns=145
+elseif has('gui_gtk')
+    set lines=42
+    set columns=150
+endif 
+
+" No menu or toolbar
+set guioptions-=m
+set guioptions-=T
+
+" No scrollbars (left, bottom, right)
+set guioptions-=L
+set guioptions-=l
+set guioptions-=R
+set guioptions-=r
+set guioptions-=b
+
+" Nice copy'n'paste
+set guioptions+=a
+
+" Set the font
+if has("eval")
+    fun! SetFont(fonts)
+        let l:fonts = a:fonts . ","
+        while l:fonts != ""
+            let l:font = strpart(l:fonts, 0, stridx(l:fonts, ","))
+            let l:fonts = strpart(l:fonts, stridx(l:fonts, ",") + 1)
+            try
+                execute "set guifont=" . l:font
+                break
+            catch
+            endtry
+        endwhile
+    endfun
+
+    if has('gui_win32') || has('gui_win64')
+        call SetFont("Consolas:h9:cANSI,Courier_New:h9:cANSI")
+    elseif has('gui_gtk')
+        call SetFont("Monospace\ 9")
+    elseif has('gui_macvim')
+        "use default
+    else
+        " use default
+    endif
+endif
+
+" Nice window title
+if has('title') && (has('gui_running') || &title)
+    set titlestring=
+    set titlestring+=%f " file name
+    set titlestring+=%h%m%r%w " flags
+    set titlestring+=\ -\ %{substitute(getcwd(),\ $HOME,\ '~',\ '')}  " working directory
+endif
+
+" MacVim GUI only options
+if has('gui_macvim')
+    " transparency
+    set transp=1
+
+    " full width full screen
+    set fuopt+=maxhorz
+endif
+
+" Vim Shell settings 
+if has('gui_win32')
+    let g:shell_fullscreen_items="mT"
+endif
+
+" vim: set sw=4 sts=4 et tw=80 :
 
