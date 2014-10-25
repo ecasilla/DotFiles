@@ -1,6 +1,7 @@
 "============== General Settings ===============
 set dict=/usr/share/dict/words
 set cursorline
+set clipboard=unnamed
 set showcmd
 set ruler
 set incsearch
