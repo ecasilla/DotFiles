@@ -166,3 +166,6 @@
 [submodule ".vim/bundle/splice.vim"]
 	path = .vim/bundle/splice.vim
 	url = https://github.com/sjl/splice.vim.git
+[submodule ".vim/bundle/vimux"]
+	path = .vim/bundle/vimux
+	url = git@github.com:benmills/vimux.git
