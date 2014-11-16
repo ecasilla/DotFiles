@@ -11,7 +11,7 @@ echo "Old .dotfiles moved to .file.old";
 
 INSTALLDIR=${1:-$HOME}
 
-for i in gocomplete.sh .profile .hushlogin .psqlrc Brewfile .gitignore .gitmodules .bash mongorc .bash_logout .pryrc .bashrc  bin  .tmux.conf .tmux-powerlinerc  .bash_profile 
+for i in gocomplete.sh .profile .hushlogin .psqlrc Brewfile .gitignore .gitmodules .bash mongorc .bash_logout .pryrc .bashrc  bin  .tmux.conf .tmux-powerlinerc  .bash_profile  .bash_prompt
  
 do
 	mv $INSTALLDIR/$i $INSTALLDIR/$i.old 2> /dev/null
@@ -143,9 +143,6 @@ if [ ! -d $HOME/.nvm ]; then
     cp -rf $PWD/.nvm  $INSTALLDIR/.nvm
 fi
 
-if [ ! -d $HOME/.bash-git-prompt ]; then
-    cp -rf $PWD/.bash-git-prompt $INSTALLDIR/.bash-git-prompt
-fi
 
 if [ ! -d $HOME/iterm ]; then
    cp -rf $PWD/iterm $INSTALLDIR/iterm
