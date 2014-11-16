@@ -67,9 +67,6 @@
 [submodule ".vim/bundle/vim-unimpaired"]
   path = .vim/bundle/vim-unimpaired 
   url= git://github.com/tpope/vim-unimpaired.git 
-[submodule ".bash-git-prompt"]
-  path = .bash-git-prompt 
-  url= https://github.com/magicmonty/bash-git-prompt.git 
 [submodule ".vim/bundle/vim-tabular"]
   path = .vim/bundle/tabular.vim 
   url= git://github.com/godlygeek/tabular.git

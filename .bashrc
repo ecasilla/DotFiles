@@ -19,10 +19,7 @@ if [ -f /USER/${USER}/.bash/aliases ]; then
 	. /USER/${USER}/.bash/aliases
 fi
 
-GIT_PROMPT_ONLY_IN_REPO=0
-
 # as last entry source the gitprompt script
-source ~/.bash-git-prompt/gitprompt.sh
 
 source ~/.nvm/nvm.sh
 
@@ -44,14 +41,14 @@ LS_COLORS="no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 
 TERM=screen-256color
 
-# {{{
 # Node Completion - Auto-generated, do not touch.
 shopt -s progcomp
 for f in $(command ls ~/.node-completion); do
   f="$HOME/.node-completion/$f"
   test -f "$f" && . "$f"
 done
-# }}}
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+# Run twolfson/sexy-bash-prompt
+. ~/.bash_prompt
