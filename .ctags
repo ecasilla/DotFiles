@@ -1,5 +1,12 @@
 # Begin vim-javascript generated section
 # generated at 2012-09-22 21:37:34 +0100
+--recurse=yes
+--tag-relative=yes
+--exclude=.git
+−−exclude=/vendor/
+--exclude=/node_modules/
+--exclude=/bower_components/
+
 --langdef=js
 --langmap=js:.js
 --regex-js=/([A-Za-z0-9._$]+)[ \t]*[:=][ \t]*\{/\1/,object/
@@ -8,9 +15,6 @@
 --regex-js=/([A-Za-z0-9._$]+)[ \t]*[:=][ \t]*\[/\1/,array/
 --regex-js=/([^= ]+)[ \t]*=[ \t]*[^"]'[^']*/\1/,string/
 --regex-js=/([^= ]+)[ \t]*=[ \t]*[^']"[^"]*/\1/,string/
-−−exclude=/vendor/
---exclude=/node_modules/
---exclude=/bower_components/
 # End vim-javascript generated section
 --langdef=coffee
 --langmap=coffee:.js.coffee
@@ -18,7 +22,4 @@
 --regex-coffee=/^[ \t]*(module\.)?(exports\.)?@?([A-Za-z.]+):.*[-=]>.*$/\3/f,function/
 --regex-coffee=/^[ \t]*(module\.)?(exports\.)?([A-Za-z.]+)[ \t]+=.*[-=]>.*$/\3/f,function/
 --regex-coffee=/^[ \t]*([A-Za-z.]+)[ \t]+=[^->\n]*$/\1/v,variable/
-−−exclude=/vendor/
---exclude=/node_modules/
---exclude=/bower_components/
 

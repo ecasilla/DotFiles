@@ -97,6 +97,10 @@ nmap <leader>F <Plug>(easymotion-F2)
 
 nnoremap <leader>a :Ag! 
 
+nnoremap <leader>. :CtrlPTag<cr>
+
+noremap <slient> <leader>b :TagbarToggle<cr>
+
 " angularjs syntasic ovveride
  let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
  let g:syntastic_mode_map={ 'mode': 'active',
