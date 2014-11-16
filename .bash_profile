@@ -42,22 +42,12 @@ alias cic='set completion-ignore-case On'   # cic:          Make tab-completion 
 trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
+# Some fancy history stuff
 
-alias  gam='git commit -am'
-alias  grm='git rm'
-alias  gmv='git mv'
-alias  grr='git reset --hard HEAD'
-alias  goop="git commit --amend -C HEAD -n"
-alias  ga='git add'
-alias  gd='git diff | subl'
-alias  gp='git push'
-alias  gl='git log --name-status'
-alias  gs='git status'
-alias  gf='git fetch -p'
-alias  gm='git commit -m'
-alias  gb='git branch'
-alias  gc='git checkout'
-alias  gff="git fetch -p && git rebase origin/\$(git_prompt_info)"
+export HISTCONTROL=erasedups  # No duplicates
+export HISTSIZE=              # Bigger history
+shopt -s histappend # Append to ~/.bash_history
+alias h='history | grep' # Easy history grep
 
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
