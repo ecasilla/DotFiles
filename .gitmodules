@@ -169,3 +169,9 @@
 [submodule ".vim/bundle/tagbar"]
 	path = .vim/bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
+[submodule ".vim/bundle/vim-css-color"]
+	path = .vim/bundle/vim-css-color
+	url = https://github.com/ap/vim-css-color.git
+[submodule ".vim/bundle/vim-hardtime"]
+	path = .vim/bundle/vim-hardtime
+	url = https://github.com/takac/vim-hardtime.git
