@@ -153,11 +153,16 @@ if [ ! -d $HOME/SpotifyControl ]; then
 fi
 
 if [ ! -d $HOME/repos ]; then
-  mkdir $HOME/repos
+  cp -rf $HOME/repos $INSTALLDIR/repos
 fi
 
+if [ ! -d $HOME/tmux ]; then
+  cp -rf$HOME/tmux $INSTALLDIR/tmux
+fi
+
+
 if [ ! -d $HOME/.git_template ]; then
-  mkdir $HOME/.git_template
+  cp -rf $HOME/.git_template $INSTALLDIR/.git_template
 fi
 
 if [ ! -d $HOME/repos/tmux-powerline ]; then
