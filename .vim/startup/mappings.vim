@@ -99,7 +99,8 @@ nnoremap <leader>a :Ag!
 
 nnoremap <leader>. :CtrlPTag<cr>
 
-noremap <slient> <leader>b :TagbarToggle<cr>
+noremap  <leader>b :TagbarToggle<cr>
+nnoremap <leader>n :call NumberToggle()<cr>
 
 " angularjs syntasic ovveride
  let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]

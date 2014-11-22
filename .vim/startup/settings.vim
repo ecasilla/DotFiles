@@ -106,6 +106,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_section_x=""
 let g:airline_section_y="%{strlen(&ft)?&ft:'none'}"
 
+let g:hardtime_default_on = 1
+
 set guifont=Inconsolata\ for\ Powerline:h18
 
 set encoding=utf-8
