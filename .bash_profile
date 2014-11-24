@@ -61,6 +61,7 @@ alias  gm='git commit -m'
 alias  gb='git branch'
 alias  gc='git checkout'
 alias  gff="git fetch -p && git rebase origin/\$(git_prompt_info)"
+alias  git='hub'
 
 
 export HISTCONTROL=erasedups  # No duplicates
@@ -74,4 +75,3 @@ export NVM_DIR="/Users/ecasilla/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export PATH=/usr/local/bin:$PATH
 
-eval "$(hub alias -s)"
