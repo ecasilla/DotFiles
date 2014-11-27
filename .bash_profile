@@ -65,7 +65,7 @@ alias  git='hub'
 
 
 export HISTCONTROL=erasedups  # No duplicates
-export HISTSIZE=              # Bigger history
+export HISTSIZE=10000        # Bigger history
 shopt -s histappend # Append to ~/.bash_history
 alias h='history | grep' # Easy history grep
 
