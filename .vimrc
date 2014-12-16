@@ -21,11 +21,14 @@ source ~/.vim/startup/functions.vim
 source ~/.vim/startup/mappings.vim
 source ~/.vim/startup/settings.vim
 source ~/.vim/startup/gvimrc.vim
+source ~/.vim/startup/Abbreviations.vim
 
 " Syntax-specific settings
 source ~/.vim/startup/js.vim
 source ~/.vim/startup/vim.vim
 source ~/.vim/startup/yaml.vim
+source ~/.vim/startup/writing.vim
+source ~/.vim/startup/go.vim
 
 if &diff
 	color molokai
