@@ -42,7 +42,10 @@ alias cic='set completion-ignore-case On'   # cic:          Make tab-completion 
 trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
-# Some fancy history stuff
+
+alias dl='docker ps -l -q'
+alias drm='docker rm $(docker ps -a -q)'
+alias dockerimages='docker images -viz'
 
 #git alias
 alias g='git'
