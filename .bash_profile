@@ -13,6 +13,10 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
+if [ -d "$HOME/Library/Python/2.7/bin" ]; then
+    PATH="$HOME/Library/Python/2.7/bin:$PATH"
+fi
+
 alias ls='ls -p'
 alias ll='ls -la'
 alias c='clear'
@@ -76,7 +80,14 @@ export CLICOLOR=1
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export NVM_DIR="/Users/ecasilla/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-export GOPATH='development/go'
+export GOPATH=$HOME/development/go
 export PATH=/usr/local/bin:$PATH
 source "`brew --prefix grc`/etc/grc.bashrc"
 
+
+
+function _update_ps1() {
+   export PS1="$(~/powerline-shell.py $? 2> /dev/null)"
+}
+
+export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"

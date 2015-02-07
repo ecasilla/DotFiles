@@ -29,4 +29,3 @@ function npmGlobalInstaller(file){
 }
 
 npmGlobalInstaller('Npmfile')
-//module.exports = npmGlobalInstaller

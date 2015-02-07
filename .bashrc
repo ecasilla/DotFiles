@@ -30,7 +30,7 @@ stripe_one_col='\[[48;5;30m[38;5;24m\]'
 stripe_two_col='\[[48;5;36m[38;5;30m\]'
 end_stripe_col='\[[48;5;0m[38;5;36m\]'
 
-export PS1='$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'$base_color' '$stripe_one_col'▶'$stripe_two_col'⮀'$end_stripe_col'⮀\[[0m\]'
+#export PS1='$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'$base_color' '$stripe_one_col'▶'$stripe_two_col'⮀'$end_stripe_col'⮀\[[0m\]'
 
 cd `cat ~/.prev_dir`
 cat /dev/null > ~/.prev_dir
@@ -51,4 +51,10 @@ done
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 # Run twolfson/sexy-bash-prompt
-. ~/.bash_prompt
+#. ~/.bash_prompt
+
+function _update_ps1() {
+   export PS1="$(~/powerline-shell.py $? 2> /dev/null)"
+}
+
+export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
