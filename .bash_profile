@@ -82,6 +82,7 @@ export NVM_DIR="/Users/ecasilla/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export GOPATH=$HOME/development/go
 export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
 source "`brew --prefix grc`/etc/grc.bashrc"
 
 

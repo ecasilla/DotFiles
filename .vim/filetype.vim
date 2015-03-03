@@ -1,4 +1,5 @@
 autocmd BufNewFile,BufRead *.git/COMMIT_EDITMSG    setf gitcommit
+autocmd BufNewFile,BufRead *.ejs,.jade,.haml       setf html
 autocmd BufNewFile,BufRead *.git/config,.gitconfig setf gitconfig
 autocmd BufNewFile,BufRead git-rebase-todo         setf gitrebase
 autocmd BufNewFile,BufRead .msg.[0-9]*
