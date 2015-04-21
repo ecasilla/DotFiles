@@ -27,8 +27,8 @@ noremap L $
 "custom comma motion mapping
 nmap di, f,dT,
 nmap ci, f,cT,
-nmap da, f,ld2F,i,<ESC>l "delete argument 
-nmap ca, f,ld2F,i,<ESC>a "delete arg and insert
+nmap da, f,ld2F,i,<ESC>l "delete argument" 
+nmap ca, f,ld2F,i,<ESC>a "delete arg and insert"
 
 map <leader>g :GundoToggle<CR>
 
@@ -100,7 +100,7 @@ nnoremap <leader>a :Ag!
 nnoremap <leader>. :CtrlPTag<cr>
 
 noremap  <leader>b :TagbarToggle<cr>
-nnoremap <leader>n :call NumberToggle()<cr>
+nnoremap <leader>n :NumberToggle()<cr>
 
 " angularjs syntasic ovveride
  let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]

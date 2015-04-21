@@ -42,7 +42,6 @@ alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable 
 alias show_options='shopt'                  # Show_options: display bash options settings
 alias fix_stty='stty sane'                  # fix_stty:     Restore terminal settings when screwed up
 alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive
-
 trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
@@ -52,7 +51,8 @@ alias drm='docker rm $(docker ps -a -q)'
 alias dockerimages='docker images -viz'
 
 #git alias
-alias g='git'
+alias  g='git'
+alias  gp='git push  '
 alias  gam='git commit -am'
 alias  grm='git rm'
 alias  gmv='git mv'
@@ -83,12 +83,3 @@ export NVM_DIR="/Users/ecasilla/.nvm"
 export GOPATH=$HOME/development/go
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-source "`brew --prefix grc`/etc/grc.bashrc"
-
-
-
-function _update_ps1() {
-   export PS1="$(~/powerline-shell.py $? 2> /dev/null)"
-}
-
-export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"

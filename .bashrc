@@ -51,10 +51,4 @@ done
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 # Run twolfson/sexy-bash-prompt
-#. ~/.bash_prompt
-
-function _update_ps1() {
-   export PS1="$(~/powerline-shell.py $? 2> /dev/null)"
-}
-
-export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+. ~/.bash_prompt

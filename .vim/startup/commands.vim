@@ -1,6 +1,11 @@
 "============== Custom Commands =============== {{{
 command -nargs=0 Sinit :call <SID>Sinit('%:p:h')
 command -nargs=? W :w <args>
+
+command! -complete=file -nargs=* Git call s:RunShellCommand('git '.<q-args>)
+command! -complete=file -nargs=* Npm call s:RunShellCommand('npm '.<q-args>)
+command! -complete=file -nargs=* Gulp call s:RunShellCommand('gulp '.<q-args>)
+
 augroup AutoMkdir
 	autocmd!
 	autocmd  BufWritePre  *  :call EnsureDirExists()
