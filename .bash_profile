@@ -17,6 +17,8 @@ if [ -d "$HOME/Library/Python/2.7/bin" ]; then
     PATH="$HOME/Library/Python/2.7/bin:$PATH"
 fi
 
+. ~/.nvm/nvm.sh
+
 alias ls='ls -p'
 alias ll='ls -la'
 alias c='clear'
@@ -78,8 +80,6 @@ alias h='history | grep' # Easy history grep
 export GREP_OPTIONS='--color=auto'
 export CLICOLOR=1
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export NVM_DIR="/Users/ecasilla/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export GOPATH=$HOME/development/go
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH

@@ -31,4 +31,6 @@ au FocusGained * :set relativenumber
 
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
+
+autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
 "}}}
