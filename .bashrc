@@ -52,3 +52,5 @@ done
 export PATH="/usr/local/heroku/bin:$PATH"
 # Run twolfson/sexy-bash-prompt
 . ~/.bash_prompt
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
