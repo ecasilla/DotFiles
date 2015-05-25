@@ -21,8 +21,6 @@ fi
 
 # as last entry source the gitprompt script
 
-source ~/.nvm/nvm.sh
-
 export PATH=$PATH":/USER/${USER}/bin/"
 
 base_color='\[[48;5;24m\]'
