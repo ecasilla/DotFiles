@@ -18,7 +18,7 @@ if [ -d "$HOME/Library/Python/2.7/bin" ]; then
 fi
 
 . ~/.nvm/nvm.sh
-
+alias fuck='$(thefuck $(fc -ln -1))'
 alias ls='ls -p'
 alias ll='ls -la'
 alias c='clear'
