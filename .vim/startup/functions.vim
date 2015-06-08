@@ -117,7 +117,17 @@ function! s:align()
     normal! 0
     call search(repeat('[^|]*|',column).'\s{-\}'.repeat('.',position),'ce',line('.'))
   endif
-endfunction}
+endfunction
+
+"BreakLine: Return TRUE if in the middle of {} or () in INSERT mode
+fun BreakLine()
+  if (mode() == 'i')
+    return ((getline(".")[col(".")-2] == '{' && getline(".")[col(".")-1] == '}') ||
+          \(getline(".")[col(".")-2] == '[' && getline(".")[col(".")-1] == ']'))
+  else
+    return 0
+  endif
+endfun
 
 function! ListLeaders()
   silent! redir @b

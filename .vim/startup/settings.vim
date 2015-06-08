@@ -87,26 +87,40 @@ endif
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
+ 
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+
 
 let g:Powerline_symbols = 'fancy'
 "unicode symbols
 let g:airline_symbols.linenr = '␊'
 let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
+let g:airline_symbols.paste_symbol = 'ρ'
+let g:airline_symbols.paste_symbol = 'Þ'
+let g:airline_symbols.paste_symbol = '∥'
 
 let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_powerline_fonts=1
 let g:airline_theme='hybrid'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_enable_branch=1
+let g:airline_enable_syntastic=1
+let g:airline#extensions#quickfix#quickfix_text = 'Qfix'
+let g:airline_mode_map = {
+        \ 'n' : 'N',
+        \ 'i' : 'I',
+        \ 'R' : 'REPLACE',
+        \ 'v' : 'VISUAL',
+        \ 'V' : 'V-LINE',
+        \ 'c' : 'CMD   ',
+        \ '': 'V-BLCK',
+        \ }
 
-
-let g:airline_section_x=""
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_section_y="%{strlen(&ft)?&ft:'none'}"
-
-let g:hardtime_default_on = 1
 
 set guifont=Inconsolata\ for\ Powerline:h18
 
@@ -116,10 +130,11 @@ set fillchars+=stl:\ ,stlnc:\
 set term=screen-256color
 set termencoding=utf-8
 
-
+let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_mru_files = 1 " Enable Most Recently Used files feature
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](doc|tmp|node_modules|bower_components)',
-  \ 'file': '\v\.(exe|so|dll|DS_Store)$',
+  \ 'dir':  '\v[\/](doc|tmp|node_modules|bower_components|git|hg|svn)|\_site)$',
+  \ 'file': '\v\.(exe|so|dll|DS_Store||class|png|jpg|jpeg)$',
   \ }
 if executable("ag")
   let g:ackprg = "ag --nogroup --column"
@@ -146,6 +161,8 @@ let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['js'] = 'javascript,javascript-jquery,javascript.node'
 let g:snipMate.scope_aliases['html'] = 'javascript,javascript-jquery,javascript.node'
 
+let g:pasta_enabled_filetypes = ['ruby', 'javascript', 'css', 'sh','html']
+let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml','mardown']
 
 " directory settings
 call system('mkdir -vp ~/.backup/undo/ > /dev/null 2>&1')

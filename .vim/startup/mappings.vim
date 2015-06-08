@@ -70,6 +70,7 @@ nmap N Nzz
 nmap } }zz
 nmap { {zz
 
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 "open tag in new tab
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
