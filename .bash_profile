@@ -17,6 +17,10 @@ if [ -d "$HOME/Library/Python/2.7/bin" ]; then
     PATH="$HOME/Library/Python/2.7/bin:$PATH"
 fi
 
+alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
+# You can use whatever you want as an alias, like for Mondays:
+alias FUCK='fuck'
+
 . ~/.nvm/nvm.sh
 alias fuck='$(thefuck $(fc -ln -1))'
 alias ls='ls -p'
