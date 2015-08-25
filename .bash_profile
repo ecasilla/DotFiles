@@ -85,5 +85,50 @@ export GREP_OPTIONS='--color=auto'
 export CLICOLOR=1
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export GOPATH=$HOME/development/go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
+export bamboo_DOCKER_USERNAME="ernie.casilla"
+export bamboo_DOCKER_EMAIL="ernie.casilla@juntacorp.com"
+
+export DOCKER_HOST="tcp://192.168.59.103:2376"
+export DOCKER_CERT_PATH="/Users/erniecasilla/.boot2docker/certs/boot2docker-vm"
+export DOCKER_TLS_VERIFY=1
+
+export bamboo_buildNumber=""
+export bamboo_planRepository_branch="develop"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export bamboo_DOCKER_PASSWORD="naked123"
+
+

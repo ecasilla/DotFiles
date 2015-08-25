@@ -190,3 +190,6 @@
 [submodule ".vim/bundle/vim-exlixir"]
 	path = .vim/bundle/vim-exlixir
 	url = git@github.com:elixir-lang/vim-elixir.git
+[submodule ".vim/bundle/vim-gradle"]
+	path = .vim/bundle/vim-gradle
+	url = https://github.com/tfnico/vim-gradle.git
