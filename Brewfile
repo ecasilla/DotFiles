@@ -1,53 +1,50 @@
-tap 'homebrew/versions'
-tap 'caskroom/cask'
-tap 'homebrew/binary'
-tap 'caskroom/fonts '
+#tap 'homebrew/versions'
+#tap 'caskroom/cask'
+#tap 'homebrew/binary'
+#tap 'caskroom/fonts '
 
-brew 'redis'
-brew 'imagemagick'
-brew ‘macvim’
-brew ‘bash-completion’
-brew ‘gist’
-brew ‘git-extras’
-brew ‘docker’
-brew ‘boot2docker’
-brew 'autoconf                   ' 
-brew 'automake                   '
-brew 'casperjs                   '
-brew 'cscope                     '
-brew 'ctags                      '
-brew 'fontconfig                 '
-brew 'fontforge                  '
-brew 'freetype                   '
-brew 'gdbm                       '
-brew 'ghi                        '
-brew 'gettext                    '
-brew 'grep                       '
-brew 'htop-osx                   '
-brew 'jpeg                       '
-brew 'libevent                   '
-brew 'libgpg-error               '
-brew 'libksba                    '
-brew 'libmpdclient               '
-brew 'libpng                     '
-brew 'libtiff                    '
-brew 'libtool                    '
-brew 'libyaml                    '
-brew 'mailcheck                  '
-brew 'mongodb                    '
-brew 'node                       '
-brew 'openssl                    '
-brew 'pcre                       '
-brew 'phantomjs                  '
-brew 'pkg-config                 '
-brew 'python                     '
-brew 'rainbarf                   '
-brew 'readline                   '
-brew 'reattach-to-user-namespace '
-brew 'redis                      '
-brew 'rmtrash                    '
-brew 'sqlite                     '
-brew 'the_silver_searcher        '
-brew 'tmux                       '
-brew 'wget                       '
-brew 'xz   ' 
+imagemagick
+macvim
+bash-completion 
+gist
+git-extras
+boot2docker
+autoconf                    
+automake                   
+casperjs                   
+cscope                     
+ctags                      
+fontconfig                 
+fontforge                  
+freetype                   
+gdbm                       
+ghi                        
+gettext                    
+htop-osx                   
+jpeg                       
+libevent                   
+libgpg-error               
+libksba                    
+libmpdclient               
+libpng                     
+libtiff                    
+libtool                    
+libyaml                    
+mailcheck                  
+mongodb                    
+node                       
+openssl                    
+pcre                       
+phantomjs                  
+pkg-config                 
+python                     
+rainbarf                   
+readline                   
+reattach-to-user-namespace 
+redis                      
+rmtrash                    
+sqlite                     
+the_silver_searcher        
+tmux                       
+wget                       
+xz 
