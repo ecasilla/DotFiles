@@ -105,3 +105,4 @@ erl_crash.dump
 .bash/.bash
 node_modules/
 iterm/.DS_Store
+.secrets.bash

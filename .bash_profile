@@ -13,6 +13,8 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
+[[ -s ~/.secrets.bash ]] && source ~/.secrets.bash
+
 if [ -d "$HOME/Library/Python/2.7/bin" ]; then
     PATH="$HOME/Library/Python/2.7/bin:$PATH"
 fi
@@ -21,10 +23,11 @@ alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
 # You can use whatever you want as an alias, like for Mondays:
 alias FUCK='fuck'
 
-. ~/.nvm/nvm.sh
+alias hosts="head -2 ~/.ssh/known_hosts | tail -1 > ~/.ssh/known_hosts"
+# Pipe my public key to my clipboard. Fuck you, pay me.
+alias pubkey="more ~/.ssh/id_dsa.public | pbcopy | echo '=> Public key copied to pasteboard.'"
 alias fuck='$(thefuck $(fc -ln -1))'
 alias ls='ls -p'
-alias ll='ls -la'
 alias c='clear'
 alias v='vim'
 alias x="exit"
@@ -76,11 +79,14 @@ alias  gc='git checkout'
 alias  gff="git fetch -p && git rebase origin/\$(git_prompt_info)"
 alias  git='hub'
 
+alias h='history | grep' # Easy history grep
+alias redis-up='redis-server /usr/local/etc/redis.conf > /dev/null &'
+alias redis-down='killall redis-server'
+
+shopt -s histappend # Append to ~/.bash_history
+
 export HISTCONTROL=erasedups  # No duplicates
 export HISTSIZE=10000        # Bigger history
-shopt -s histappend # Append to ~/.bash_history
-alias h='history | grep' # Easy history grep
-
 export GREP_OPTIONS='--color=auto'
 export CLICOLOR=1
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
@@ -94,35 +100,4 @@ export PATH=/usr/local/sbin:$PATH
 export DOCKER_HOST="tcp://192.168.59.103:2376"
 export DOCKER_CERT_PATH="/Users/ecasilla/.boot2docker/certs/boot2docker-vm"
 export DOCKER_TLS_VERIFY=1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

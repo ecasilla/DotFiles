@@ -28,9 +28,9 @@ set nocompatible
 set enc=utf-8
 set fillchars=vert:¦
 
-set softtabstop=2
+set softtabstop=4
 set expandtab
-set tabstop=2
+set tabstop=4
 set shiftwidth=2
 set foldcolumn=1
 set cc=+1,+2
@@ -105,8 +105,6 @@ let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_powerline_fonts=1
 let g:airline_theme='hybrid'
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_enable_branch=1
-let g:airline_enable_syntastic=1
 let g:airline#extensions#quickfix#quickfix_text = 'Qfix'
 let g:airline_mode_map = {
         \ 'n' : 'N',
@@ -121,7 +119,8 @@ let g:airline_mode_map = {
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_section_y="%{strlen(&ft)?&ft:'none'}"
-
+let g:cpp_experimental_template_highlight = 1
+let g:cpp_class_scope_highlight = 1
 set guifont=Inconsolata\ for\ Powerline:h18
 
 set encoding=utf-8
