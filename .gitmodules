@@ -196,3 +196,6 @@
 [submodule ".vim/bundle/elm.vim"]
 	path = .vim/bundle/elm.vim
 	url = git@github.com:lambdatoast/elm.vim.git
+[submodule "tmux/themes/tmux-powerline"]
+	path = tmux/themes/tmux-powerline
+	url = git@github.com:erikw/tmux-powerline.git

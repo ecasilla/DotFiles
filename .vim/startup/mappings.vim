@@ -31,7 +31,7 @@ nmap da, f,ld2F,i,<ESC>l "delete argument"
 nmap ca, f,ld2F,i,<ESC>a "delete arg and insert"
 
 map <leader>g :GundoToggle<CR>
-
+map <leader>ss :setlocal spell!<cr>
 " delete surrounding characters
 noremap ds{ F{xf}x
 noremap cs{ F{xf}xi
@@ -102,6 +102,12 @@ nnoremap <leader>. :CtrlPTag<cr>
 
 noremap  <leader>b :TagbarToggle<cr>
 nnoremap <leader>n :NumberToggle()<cr>
+
+" Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
+nmap <M-j> mz:m+<cr>`z
+nmap <M-k> mz:m-2<cr>`z
+vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 " angularjs syntasic ovveride
  let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]

@@ -34,6 +34,9 @@ set tabstop=4
 set shiftwidth=2
 set foldcolumn=1
 set cc=+1,+2
+" Highlight search results
+set hlsearch
+set lazyredraw
 
 set linespace=0
 set list listchars=tab:› ,trail:-,extends:>,precedes:<,eol:¬
@@ -84,23 +87,45 @@ else
   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
  
+let g:Powerline_symbols = 'fancy'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => bufExplorer plugin
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:bufExplorerDefaultHelp=0
+let g:bufExplorerShowRelativePath=1
+let g:bufExplorerFindActive=1
+let g:bufExplorerSortBy='name'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" syntastic
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_elixir_checker = 1
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 
 
-let g:Powerline_symbols = 'fancy'
-"unicode symbols
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" airline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
 let g:airline_symbols.linenr = '␊'
 let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.paste_symbol = 'ρ'
 let g:airline_symbols.paste_symbol = 'Þ'
 let g:airline_symbols.paste_symbol = '∥'
-
 let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_powerline_fonts=1
 let g:airline_theme='hybrid'
@@ -128,7 +153,12 @@ set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
 set term=screen-256color
 set termencoding=utf-8
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => surround.vim config
+" Annotate strings with gettext http://amix.dk/blog/post/19678
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+vmap Si S(i_<esc>f)
+au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_mru_files = 1 " Enable Most Recently Used files feature
 let g:ctrlp_custom_ignore = {
@@ -179,3 +209,8 @@ set undolevels=100
 
 scriptencoding utf-8
 
+" Disable scrollbars (real hackers don't use scrollbars for navigation!)
+set guioptions-=r
+set guioptions-=R
+set guioptions-=l
+set guioptions-=L

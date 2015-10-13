@@ -1,19 +1,18 @@
+#! /usr/bin/env bash
+
 [[ -s ~/.bashrc ]] && source ~/.bashrc
+[[ -s ~/.git-completion ]] && source ~/.git-completion
+[[ -s ~/.secrets.bash ]] && source ~/.secrets.bash
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+[[ -s "$(brew --prefix)/etc/autojump.sh" ]] && . "$(brew --prefix)/etc/autojump.sh"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
+if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+  . "$(brew --prefix)/etc/bash_completion"
 fi
 
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
-
-[[ -s ~/.secrets.bash ]] && source ~/.secrets.bash
 
 if [ -d "$HOME/Library/Python/2.7/bin" ]; then
     PATH="$HOME/Library/Python/2.7/bin:$PATH"
@@ -100,4 +99,5 @@ export PATH=/usr/local/sbin:$PATH
 export DOCKER_HOST="tcp://192.168.59.103:2376"
 export DOCKER_CERT_PATH="/Users/ecasilla/.boot2docker/certs/boot2docker-vm"
 export DOCKER_TLS_VERIFY=1
+export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
