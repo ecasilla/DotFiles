@@ -199,3 +199,6 @@
 [submodule "tmux/themes/tmux-powerline"]
 	path = tmux/themes/tmux-powerline
 	url = git@github.com:erikw/tmux-powerline.git
+[submodule ".vim/bundle/ctrlp-py-matcher"]
+	path = .vim/bundle/ctrlp-py-matcher
+	url = https://github.com/FelikZ/ctrlp-py-matcher

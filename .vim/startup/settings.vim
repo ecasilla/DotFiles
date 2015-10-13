@@ -6,6 +6,7 @@ set showcmd
 set ruler
 set incsearch
 set wildmenu
+set hidden
 syntax enable
 set synmaxcol=0
 set term=screen-256color
@@ -168,6 +169,7 @@ let g:ctrlp_custom_ignore = {
 if executable("ag")
   let g:ackprg = "ag --nogroup --column"
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:CtrlSpaceGlobCommand = 'ag $s -l --nocolor -g ""'
 endif
 
 "session mangement
