@@ -27,7 +27,6 @@ set number
 set nocompatible
 
 set enc=utf-8
-set fillchars=vert:¦
 
 set softtabstop=4
 set expandtab
@@ -89,7 +88,7 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
  
-let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols='fancy'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => bufExplorer plugin
@@ -129,7 +128,7 @@ let g:airline_symbols.paste_symbol = 'Þ'
 let g:airline_symbols.paste_symbol = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_powerline_fonts=1
-let g:airline_theme='hybrid'
+let g:airline_theme='powerlineish'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#quickfix#quickfix_text = 'Qfix'
 let g:airline_mode_map = {

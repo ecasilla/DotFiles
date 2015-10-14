@@ -109,6 +109,10 @@ nmap <M-k> mz:m-2<cr>`z
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
+nmap <F6> <Plug>ColorstepPrev
+nmap <F7> <Plug>ColorstepNext
+nmap <S-F7> <Plug>ColorstepReload
+
 " angularjs syntasic ovveride
  let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
  let g:syntastic_mode_map={ 'mode': 'active',

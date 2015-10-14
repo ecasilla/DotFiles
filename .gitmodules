@@ -202,3 +202,6 @@
 [submodule ".vim/bundle/ctrlp-py-matcher"]
 	path = .vim/bundle/ctrlp-py-matcher
 	url = https://github.com/FelikZ/ctrlp-py-matcher
+[submodule ".vim/bundle/vim-colorstepper"]
+	path = .vim/bundle/vim-colorstepper
+	url = git@github.com:qualiabyte/vim-colorstepper.git
