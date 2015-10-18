@@ -32,5 +32,5 @@ source ~/.vim/startup/writing.vim
 source ~/.vim/startup/go.vim
 
 if &diff
-	color molokai
+	color hybrid
 endif
