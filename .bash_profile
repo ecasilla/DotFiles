@@ -34,30 +34,9 @@ alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias .....='cd ../../../../'
-mcd () { mkdir -p "$1" && cd "$1"; }
-
-alias cp='cp -iv'
-alias mv='mv -iv'
-alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
-alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
-alias less='less -FSRXc'                    # Preferred 'less' implementation
-cd() { builtin cd "$@"; ll; }               # Always list directory contents upon 'cd'
-alias edit=’subl’
-alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
-alias ~="cd ~"                              # ~:            Go Home
-alias which='type -all'                     # which:        Find executables
-alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
-alias show_options='shopt'                  # Show_options: display bash options settings
-alias fix_stty='stty sane'                  # fix_stty:     Restore terminal settings when screwed up
-alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive
-trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
-ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
-alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
-
 alias dl='docker ps -l -q'
 alias drm='docker rm $(docker ps -a -q)'
 alias dockerimages='docker images -viz'
-
 #git alias
 alias  g='git'
 alias  gp='git push  '
@@ -81,6 +60,24 @@ alias  git='hub'
 alias h='history | grep' # Easy history grep
 alias redis-up='redis-server /usr/local/etc/redis.conf > /dev/null &'
 alias redis-down='killall redis-server'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
+alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
+alias less='less -FSRXc'                    # Preferred 'less' implementation
+alias edit=’subl’
+alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
+alias ~="cd ~"                              # ~:            Go Home
+alias which='type -all'                     # which:        Find executables
+alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
+alias show_options='shopt'                  # Show_options: display bash options settings
+alias fix_stty='stty sane'                  # fix_stty:     Restore terminal settings when screwed up
+alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
+alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive
+trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
+ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
+cd() { builtin cd "$@"; ll; }               # Always list directory contents upon 'cd'
+mcd () { mkdir -p "$1" && cd "$1"; }
 
 shopt -s histappend # Append to ~/.bash_history
 
@@ -101,3 +98,4 @@ export DOCKER_CERT_PATH="/Users/ecasilla/.boot2docker/certs/boot2docker-vm"
 export DOCKER_TLS_VERIFY=1
 export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
+source /Users/ecasilla/development/invision/InVision_Docker/scripts/invision.sh
