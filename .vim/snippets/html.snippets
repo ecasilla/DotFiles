@@ -51,6 +51,19 @@ snippet esc
 snippet //
 	<!-- ${1} -->${0}
 # Generic Doctype
+snippet html:5
+	<!DOCTYPE HTML>
+	<html>
+	  <head>
+		  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+		  <title>${1:`substitute(vim_snippets#Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
+		  ${0}
+	  </head>
+	  <body>
+		  ${0}
+	  </body>
+	</html>
 snippet doctype HTML 4.01 Strict
 	<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
 	"http://www.w3.org/TR/html4/strict.dtd">
