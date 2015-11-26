@@ -205,3 +205,9 @@
 [submodule ".vim/bundle/vim-colorstepper"]
 	path = .vim/bundle/vim-colorstepper
 	url = git@github.com:qualiabyte/vim-colorstepper.git
+[submodule ".vim/bundle/vim-gocode"]
+	path = .vim/bundle/vim-gocode
+	url = git@github.com:Blackrush/vim-gocode.git
+[submodule ".vim/bundle/rust.vim"]
+	path = .vim/bundle/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git

@@ -193,6 +193,7 @@ let g:snipMate.scope_aliases['html'] = 'javascript,javascript-jquery,javascript.
 
 let g:pasta_enabled_filetypes = ['ruby', 'javascript', 'css', 'sh','html']
 let g:pasta_disabled_filetypes = ['python', 'coffee', 'yaml','mardown']
+let g:go_fmt_command = "goimports"
 
 " directory settings
 call system('mkdir -vp ~/.backup/undo/ > /dev/null 2>&1')
