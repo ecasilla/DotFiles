@@ -147,7 +147,7 @@ let g:airline_section_y="%{strlen(&ft)?&ft:'none'}"
 let g:cpp_experimental_template_highlight = 1
 let g:cpp_class_scope_highlight = 1
 set guifont=Inconsolata\ for\ Powerline:h18
-
+let g:go_fmt_command = "goimports"
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\

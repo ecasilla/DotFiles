@@ -1,3 +1,4 @@
+#!bin/bash
 # common functions
 hsearch() { history | grep $1 | grep -v hsearch; }
 
