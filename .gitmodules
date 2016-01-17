@@ -193,9 +193,6 @@
 [submodule ".vim/bundle/vim-gradle"]
 	path = .vim/bundle/vim-gradle
 	url = https://github.com/tfnico/vim-gradle.git
-[submodule ".vim/bundle/elm.vim"]
-	path = .vim/bundle/elm.vim
-	url = git@github.com:lambdatoast/elm.vim.git
 [submodule "tmux/themes/tmux-powerline"]
 	path = tmux/themes/tmux-powerline
 	url = git@github.com:erikw/tmux-powerline.git
@@ -217,3 +214,6 @@
 [submodule ".vim/bundle/ansible-vim"]
 	path = .vim/bundle/ansible-vim
 	url = git@github.com:pearofducks/ansible-vim.git
+[submodule ".vim/bundle/elm-vim"]
+	path = .vim/bundle/elm-vim
+	url = git@github.com:ElmCast/elm-vim.git
