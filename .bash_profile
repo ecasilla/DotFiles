@@ -74,6 +74,7 @@ alias show_options='shopt'                  # Show_options: display bash options
 alias fix_stty='stty sane'                  # fix_stty:     Restore terminal settings when screwed up
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
 alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive
+alias gitkeep='find . -type d -empty -not -path "./.git/*" -exec touch {}/.gitkeep \;' # add gitkeep file to empty dirs
 trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 cd() { builtin cd "$@"; ll; }               # Always list directory contents upon 'cd'
@@ -99,3 +100,9 @@ export DOCKER_TLS_VERIFY=1
 export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 source /Users/ecasilla/development/invision/InVision_Docker/scripts/invision.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/ecasilla/Downloads/yes/google-cloud-sdk/path.bash.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/ecasilla/Downloads/yes/google-cloud-sdk/completion.bash.inc'
