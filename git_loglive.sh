@@ -1,10 +1,14 @@
-#!/bin/bash
-
-while :
+#!/bin/sh
+while true;
 do
   clear
-  #git --no-pager log --graph --pretty=oneline --abbrev-commit --decorate --all $*
-  git  log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all $*
-  sleep 1
+  git log \
+    --graph \
+    --all \
+    --color \
+    --date=short \
+    -40 \
+    --pretty=format:"%C(yellow)%h%x20%C(white)%cd%C(green)%d%C(reset)%x20%s%x20%C(bold)(%an)%Creset" |
+  cat -
+  sleep 5
 done
-
