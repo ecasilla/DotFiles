@@ -94,15 +94,6 @@ export PATH=$PATH:$GOROOT/bin
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
-export DOCKER_HOST="tcp://192.168.59.103:2376"
-export DOCKER_CERT_PATH="/Users/ecasilla/.boot2docker/certs/boot2docker-vm"
-export DOCKER_TLS_VERIFY=1
-export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+#export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
-source /Users/ecasilla/development/invision/InVision_Docker/scripts/invision.sh
-
-# The next line updates PATH for the Google Cloud SDK.
-source '/Users/ecasilla/Downloads/yes/google-cloud-sdk/path.bash.inc'
-
-# The next line enables shell command completion for gcloud.
-source '/Users/ecasilla/Downloads/yes/google-cloud-sdk/completion.bash.inc'
+source /Users/eenterprise001/development/invision/InVision_Docker/scripts/invision.sh
