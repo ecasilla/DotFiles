@@ -13,6 +13,9 @@ if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
   . "$(brew --prefix)/etc/bash_completion"
 fi
 
+if [ -f $(brew --prefix)/etc/brew-wrap ];then
+  source $(brew --prefix)/etc/brew-wrap
+fi
 
 if [ -d "$HOME/Library/Python/2.7/bin" ]; then
     PATH="$HOME/Library/Python/2.7/bin:$PATH"
@@ -24,7 +27,7 @@ alias FUCK='fuck'
 
 alias hosts="head -2 ~/.ssh/known_hosts | tail -1 > ~/.ssh/known_hosts"
 # Pipe my public key to my clipboard. Fuck you, pay me.
-alias pubkey="more ~/.ssh/id_dsa.public | pbcopy | echo '=> Public key copied to pasteboard.'"
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 alias fuck='$(thefuck $(fc -ln -1))'
 alias ls='ls -p'
 alias c='clear'
@@ -96,4 +99,4 @@ export PATH=/usr/local/sbin:$PATH
 
 #export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
-source /Users/eenterprise001/development/invision/InVision_Docker/scripts/invision.sh
+source /Users/invision/development/invision/InVision_Docker/scripts/invision.sh

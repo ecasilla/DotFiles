@@ -106,8 +106,9 @@ echo "  \__ \  / __/ / __ \`/  / ___/ / __/  / /   / __ \  / __ \`/         / / 
 echo " ___/ / / /_  / /_/ /  / /    / /_   / /   / / / / / /_/ /         / /    / /_/ /        / /_/ /  / /    /  __/| |/ |/ / ";
 echo "/____/  \__/  \__,_/  /_/     \__/  /_/   /_/ /_/  \__, /         /_/     \____/        /_____/  /_/     \___/ |__/|__/  ";
 echo "                                                  /____/                                                                 ";
-brew tap Homebrew/brewdler
-brew brewdle
+curl -fsSL https://raw.github.com/rcmdnk/homebrew-file/install/install.sh |sh
+yes | cp -rf ./Brewfile $HOME/.brewfile/Brewfile
+brew file install
 else
   echo
   echo " \\\  ///   .-.     ";

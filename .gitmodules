@@ -217,3 +217,9 @@
 [submodule ".vim/bundle/elm-vim"]
 	path = .vim/bundle/elm-vim
 	url = git@github.com:ElmCast/elm-vim.git
+[submodule ".vim/bundle/elm.vim"]
+	path = .vim/bundle/elm.vim
+	url = https://github.com/lambdatoast/elm.vim.git
+[submodule ".vim/bundle/vim-airline-themes"]
+	path = .vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
