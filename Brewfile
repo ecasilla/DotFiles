@@ -5,8 +5,12 @@ tap argon/mas
 brew mas
 
 tap caskroom/cask
+cask basecamp
 
 tap caskroom/fonts
+cask font-inconsolata-dz-for-powerline
+cask font-inconsolata-dz
+cask font-inconsolata
 
 tap homebrew/binary
 
@@ -22,6 +26,7 @@ tap rcmdnk/file
 brew brew-file
 
 # Other Homebrew packages
+brew ansible
 brew autoconf
 brew automake
 brew bash-completion
@@ -39,7 +44,9 @@ brew gist
 brew git
 brew git-extras
 brew glib
+brew go
 brew gobject-introspection
+brew graphviz
 brew harfbuzz
 brew htop-osx
 brew hub
@@ -65,6 +72,7 @@ brew pcre
 brew phantomjs
 brew pixman
 brew pkg-config
+brew postgres
 brew python
 brew rainbarf
 brew readline
@@ -72,6 +80,8 @@ brew reattach-to-user-namespace
 brew redis
 brew rmtrash
 brew sqlite
+brew terraform
+brew tesseract
 brew the_silver_searcher
 brew thefuck
 brew tmux
