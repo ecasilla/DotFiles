@@ -106,3 +106,4 @@ erl_crash.dump
 node_modules/
 iterm/.DS_Store
 .secrets.bash
+.vim/.vim
