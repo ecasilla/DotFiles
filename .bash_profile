@@ -25,6 +25,7 @@ alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
 # You can use whatever you want as an alias, like for Mondays:
 alias FUCK='fuck'
 
+alias diary='cd ~/code/journal && vim `date +"%Y-%m-%d"`.md'
 alias hosts="head -2 ~/.ssh/known_hosts | tail -1 > ~/.ssh/known_hosts"
 # Pipe my public key to my clipboard. Fuck you, pay me.
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
@@ -100,4 +101,4 @@ export PATH=/usr/local/sbin:$PATH
 #export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
 
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+source /Users/ecasilla/development/ernie/peer/cli/scripts/peer.sh

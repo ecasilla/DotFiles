@@ -86,3 +86,16 @@ _complete_ssh_hosts ()
         return 0
 }
 complete -F _complete_ssh_hosts ssh
+
+
+alias md2word=md2word 
+
+function md2word () {  
+    PANDOC_INSTALLED=$(pandoc --version >> /dev/null; echo $?)
+
+    if [ "0" == ${PANDOC_INSTALLED} ]; then
+        pandoc -o $2 -f markdown -t docx $1
+    else
+        echo "Pandoc is not installed. Unable to convert document."
+    fi
+}
