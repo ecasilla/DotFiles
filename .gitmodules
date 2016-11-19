@@ -223,3 +223,6 @@
 [submodule ".vim/bundle/conque-term"]
 	path = .vim/bundle/conque-term
 	url = git@github.com:rosenfeld/conque-term.git
+[submodule ".vim/bundle/typescript-vim"]
+	path = .vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
