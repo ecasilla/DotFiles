@@ -98,7 +98,8 @@ export PATH=$PATH:$GOROOT/bin
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
-#export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+export PATH=$HOME/.cargo/bin:$PATH
 
 
-source /Users/ecasilla/development/ernie/peer/cli/scripts/peer.sh
+# added by Anaconda3 4.3.0 installer
+export PATH="//anaconda/bin:$PATH"

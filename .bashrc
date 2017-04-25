@@ -32,7 +32,7 @@ fi
 export PATH=$PATH":/USER/${USER}/bin/"
 
 export PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
-
+export PATH="$PATH:`yarn global bin`"
 cat ~/.prev_dir
 cat /dev/null > ~/.prev_dir
 
