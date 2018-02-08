@@ -101,5 +101,3 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 
 
-# added by Anaconda3 4.3.0 installer
-export PATH="//anaconda/bin:$PATH"
